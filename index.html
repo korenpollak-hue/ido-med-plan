@@ -17,7 +17,6 @@
             direction: rtl;
         }
 
-        /* Editable highlight */
         [contenteditable="true"]:focus {
             outline: 2px dashed #6c5ce7;
             outline-offset: 4px;
@@ -38,7 +37,6 @@
         }
         .edit-hint:hover { background: rgba(108, 92, 231, 1); }
 
-        /* Print / PDF — light theme */
         @media print {
             body { background: #fff !important; color: #1a1a1a !important; }
             .hero { background: #f0f0ff !important; border-bottom-color: #6c5ce7 !important; }
@@ -64,7 +62,6 @@
             .yearly-plan .month h4 { color: #4a3db0 !important; }
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1a1a3e 0%, #0d0d2b 50%, #1a0a2e 100%);
             padding: 60px 40px;
@@ -89,7 +86,6 @@
         .hero h1 { font-size: 3em; font-weight: 800; color: #fff; position: relative; margin-bottom: 10px; }
         .hero p { font-size: 1.2em; color: #a0a0c0; position: relative; }
 
-        /* Urgent Banner */
         .urgent-banner {
             background: linear-gradient(135deg, #2d1117, #1a0a0e);
             border: 2px solid #e74c3c;
@@ -105,8 +101,8 @@
         .urgent-banner h2 { color: #e74c3c; font-size: 1.5em; margin-bottom: 8px; }
         .urgent-banner p { color: #ff6b6b; margin: 4px 0; }
         .urgent-banner a { color: #ff9999; }
+        .urgent-banner ul { list-style: none; padding: 0; text-align: right; }
 
-        /* Sections */
         section {
             max-width: 1100px;
             margin: 30px auto;
@@ -115,6 +111,7 @@
             border-radius: 16px;
             border: 1px solid rgba(108, 92, 231, 0.2);
         }
+
         h2 {
             color: #6c5ce7;
             font-size: 1.8em;
@@ -122,11 +119,17 @@
             padding-bottom: 10px;
             border-bottom: 2px solid rgba(108, 92, 231, 0.3);
         }
+
         h3 { color: #00ced1; margin: 18px 0 10px; font-size: 1.3em; }
         h4 { color: #a29bfe; margin: 14px 0 8px; }
 
-        /* Cards */
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 15px 0; }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 15px 0;
+        }
+
         .card {
             background: rgba(30, 30, 60, 0.8);
             border: 1px solid rgba(108, 92, 231, 0.3);
@@ -134,30 +137,24 @@
             padding: 20px;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(108, 92, 231, 0.2); }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.2);
+        }
         .card h3 { color: #a29bfe; margin-top: 0; font-size: 1.1em; }
 
-        /* Tags */
-        .tag {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin: 2px;
-        }
+        .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; margin: 2px; }
         .tag-green { background: rgba(0,200,83,0.2); color: #00c853; }
         .tag-red { background: rgba(231,76,60,0.2); color: #e74c3c; }
         .tag-yellow { background: rgba(255,193,7,0.2); color: #ffc107; }
         .tag-blue { background: rgba(108,92,231,0.2); color: #a29bfe; }
         .tag-cyan { background: rgba(0,206,209,0.2); color: #00ced1; }
 
-        /* Tables */
         table { width: 100%; border-collapse: collapse; margin: 15px 0; }
         th { background: rgba(108, 92, 231, 0.3); color: #fff; padding: 12px; text-align: right; font-weight: 700; }
         td { padding: 10px 12px; border-bottom: 1px solid rgba(108, 92, 231, 0.15); }
         tr:hover td { background: rgba(108, 92, 231, 0.08); }
 
-        /* Timeline */
         .timeline { position: relative; padding-right: 30px; margin: 20px 0; }
         .timeline::before { content: ''; position: absolute; right: 8px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #6c5ce7, #00ced1); border-radius: 3px; }
         .timeline-item { position: relative; margin: 20px 0; padding-right: 30px; }
@@ -166,11 +163,9 @@
         .timeline-item h4 { color: #a29bfe; margin: 0 0 5px; }
         .timeline-item p { color: #b0b0c0; margin: 2px 0; }
 
-        /* Links */
         a { color: #a29bfe; text-decoration: none; }
         a:hover { color: #6c5ce7; text-decoration: underline; }
 
-        /* Resource boxes */
         .resource-box {
             background: rgba(0, 206, 209, 0.08);
             border: 1px solid rgba(0, 206, 209, 0.25);
@@ -181,9 +176,7 @@
         .resource-box h4 { color: #00ced1; margin-top: 0; }
         .resource-box ul { list-style: none; padding: 0; }
         .resource-box li { padding: 4px 0; }
-        .resource-box li::before { content: '📖 '; }
 
-        /* Time estimate badges */
         .time-badge {
             display: inline-block;
             background: rgba(255, 193, 7, 0.2);
@@ -194,8 +187,11 @@
             font-weight: 600;
         }
 
-        /* Yearly plan */
-        .yearly-plan { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .yearly-plan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
         .month {
             background: rgba(30, 30, 60, 0.6);
             border: 1px solid rgba(108, 92, 231, 0.2);
@@ -205,9 +201,7 @@
         .month h4 { color: #a29bfe; margin-top: 0; font-size: 1.1em; border-bottom: 1px solid rgba(108,92,231,0.2); padding-bottom: 6px; }
         .month ul { padding-right: 18px; margin: 0; }
         .month li { padding: 3px 0; font-size: 0.92em; }
-        .month .hours { color: #ffc107; font-weight: 600; font-size: 0.85em; }
 
-        /* Collapsible */
         details { margin: 10px 0; }
         summary {
             cursor: pointer;
@@ -219,27 +213,33 @@
         }
         summary:hover { background: rgba(108, 92, 231, 0.25); }
         details[open] summary { border-radius: 8px 8px 0 0; }
-        details > div { padding: 15px; background: rgba(30, 30, 60, 0.5); border-radius: 0 0 8px 8px; border: 1px solid rgba(108, 92, 231, 0.15); border-top: 0; }
+        details > div {
+            padding: 15px;
+            background: rgba(30, 30, 60, 0.5);
+            border-radius: 0 0 8px 8px;
+            border: 1px solid rgba(108, 92, 231, 0.15);
+            border-top: 0;
+        }
 
-        /* TOC */
         .nav-toc {
             position: fixed;
             top: 80px;
             left: 20px;
-            width: 220px;
+            width: 240px;
             background: rgba(10, 10, 26, 0.95);
             border: 1px solid rgba(108, 92, 231, 0.3);
             border-radius: 12px;
             padding: 15px;
             z-index: 99;
-            max-height: 80vh;
+            max-height: 85vh;
             overflow-y: auto;
-            font-size: 0.82em;
+            font-size: 0.78em;
             transition: transform 0.3s;
         }
-        .nav-toc.hidden { transform: translateX(-260px); }
-        .nav-toc a { display: block; padding: 4px 0; color: #a0a0c0; }
+        .nav-toc.hidden { transform: translateX(-280px); }
+        .nav-toc a { display: block; padding: 3px 0; color: #a0a0c0; }
         .nav-toc a:hover { color: #6c5ce7; }
+
         .toc-toggle {
             position: fixed;
             top: 80px;
@@ -254,919 +254,1223 @@
             font-family: inherit;
         }
 
-        /* Checklist styling */
         .checklist { list-style: none; padding: 0; }
         .checklist li { padding: 6px 0; display: flex; align-items: center; gap: 8px; }
         .checklist input[type="checkbox"] { width: 18px; height: 18px; accent-color: #6c5ce7; }
 
-        /* Recognition table special */
-        .recognition-yes { color: #00c853; font-weight: 700; }
-        .recognition-no { color: #e74c3c; font-weight: 700; }
-        .recognition-partial { color: #ffc107; font-weight: 700; }
+        .step-list { counter-reset: step; list-style: none; padding: 0; }
+        .step-list li { counter-increment: step; padding: 8px 0 8px 0; position: relative; padding-right: 35px; }
+        .step-list li::before { content: counter(step); position: absolute; right: 0; top: 8px; width: 26px; height: 26px; background: #6c5ce7; color: #fff; border-radius: 50%; text-align: center; line-height: 26px; font-weight: 700; font-size: 0.85em; }
+
+        .country-flag { font-size: 1.4em; margin-left: 6px; }
+
+        .life-section { background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(0,206,209,0.05)); border: 1px solid rgba(108,92,231,0.3); }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2em; }
             section { margin: 15px 10px; padding: 20px; }
-            .nav-toc { display: none; }
-            .toc-toggle { display: none; }
+            .nav-toc, .toc-toggle { display: none; }
             .card-grid { grid-template-columns: 1fr; }
             .yearly-plan { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
-<!-- Edit Hint -->
-<div class="edit-hint" onclick="document.querySelectorAll('[contenteditable]').forEach(el => el.contentEditable = el.contentEditable === 'true' ? 'false' : 'true'); this.textContent = this.textContent.includes('עריכה') ? '🔒 נעילת עריכה' : '✏️ מצב עריכה'">
-    ✏️ מצב עריכה
-</div>
-
-<!-- TOC Toggle -->
-<button class="toc-toggle" onclick="document.querySelector('.nav-toc').classList.toggle('hidden')">☰ תוכן עניינים</button>
-
-<!-- Navigation TOC -->
-<nav class="nav-toc hidden">
-    <strong style="color:#6c5ce7">תוכן עניינים</strong><br><br>
-    <a href="#situation">1. המצב שלך</a>
-    <a href="#bagrut">2. בגרויות — סטטוס</a>
-    <a href="#exam-calendar">3. לוח מבחנים</a>
-    <a href="#exam-content">4. תכני המבחנים + חומרים</a>
-    <a href="#open-uni">5. האוניברסיטה הפתוחה</a>
-    <a href="#recognition">6. הכרה בקורסים אקדמאים</a>
-    <a href="#universities">7. אוניברסיטאות — השוואה</a>
-    <a href="#uni-exams">8. מבחני כניסה לכל אוניברסיטה</a>
-    <a href="#yearly-plan">9. תוכנית שנתית מלאה</a>
-    <a href="#weekly">10. שבוע טיפוסי</a>
-    <a href="#health">11. בריאות ורווחה</a>
-    <a href="#links">12. קישורים וטלפונים</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-    <h1>🎓 עידו — תוכנית רפואה באירופה</h1>
-    <p>תוכנית מקיפה: בגרויות → אוניברסיטה פתוחה → IMAT → רפואה באיטליה</p>
-    <p style="font-size:0.85em; color:#808090; position:relative">נוצר: 08.03.2026 | עודכן אחרון: מרץ 2026 | לחץ "מצב עריכה" לעריכה ישירה</p>
-</div>
-
-
-<!-- 1. SITUATION -->
-<section id="situation">
-    <h2>1. המצב שלך — סיכום</h2>
-    <div class="card-grid">
-        <div class="card" contenteditable="false">
-            <h3>👤 מי אתה</h3>
-            <ul>
-                <li>סטודנט לפסיכולוגיה באוניברסיטה הפתוחה</li>
-                <li>קורסים נוכחיים: תאוריה ומחקר באישיות + פסיכולוגיה פיזיולוגית ב</li>
-                <li>דרכון פולני (EU) — יתרון ענק!</li>
-            </ul>
-        </div>
-        <div class="card" contenteditable="false">
-            <h3>🎯 היעד</h3>
-            <ul>
-                <li>לימודי רפואה באירופה (6 שנים)</li>
-                <li>התחלה מתוכננת: אוקטובר 2027</li>
-                <li>יעד ראשי: איטליה (IMAT) — פחות מ-1,000€/שנה עם EU</li>
-            </ul>
-        </div>
-        <div class="card" contenteditable="false">
-            <h3>❌ מה חסר</h3>
-            <ul>
-                <li>בגרות: אנגלית (3 מודולים) + מתמטיקה (3 יח"ל)</li>
-                <li>מבחן IMAT (ספטמבר 2027)</li>
-                <li>2 בחינות פסיכולוגיה (סמסטר נוכחי)</li>
-            </ul>
-        </div>
+    <div class="nav-toc" id="toc">
+        <strong>תוכן עניינים</strong>
+        <a href="#situation">1. המצב שלך</a>
+        <a href="#bagrut">2. בגרויות — סטטוס</a>
+        <a href="#exam-calendar">3. לוח מבחנים</a>
+        <a href="#exam-content">4. תכני המבחנים + חומרים</a>
+        <a href="#open-uni">5. האוניברסיטה הפתוחה</a>
+        <a href="#psych">6. פסיכולוגיה — קורסים + עבודות</a>
+        <a href="#recognition">7. הכרה בקורסים אקדמאים</a>
+        <a href="#universities">8. אוניברסיטאות — השוואה מלאה</a>
+        <a href="#how-to-apply">9. איך נרשמים — שלב אחר שלב</a>
+        <a href="#books">10. כל הספרים שצריך</a>
+        <a href="#uni-exams">11. מבחני כניסה — פירוט</a>
+        <a href="#yearly-plan">12. תוכנית שנתית מלאה</a>
+        <a href="#weekly">13. שבוע טיפוסי</a>
+        <a href="#life-plan">14. תוכנית חיים מלאה</a>
+        <a href="#health">15. בריאות ורווחה</a>
+        <a href="#scholarships">16. מלגות ומימון</a>
+        <a href="#links">17. קישורים וטלפונים</a>
     </div>
-</section>
 
-<!-- 2. BAGRUT STATUS -->
-<section id="bagrut">
-    <h2>2. בגרויות — סטטוס מלא (מהתמונה)</h2>
+    <button class="toc-toggle" onclick="document.getElementById('toc').classList.toggle('hidden')">☰</button>
 
-    <h3>✅ כבר רשום / הושלם</h3>
-    <table>
-        <tr><th>קוד</th><th>מקצוע</th><th>יחידות</th><th>סטטוס</th></tr>
-        <tr><td>37382</td><td>כימיה</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>37381</td><td>כימיה</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>37282</td><td>כימיה</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>8281</td><td>ספרות</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>43381</td><td>ביולוגיה</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>34281</td><td>אזרחות</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>34282</td><td>אזרחות</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>16484</td><td>אנגלית (מודול D)</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>1261</td><td>תנ"ך</td><td>0</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-    </table>
+    <div class="edit-hint" onclick="alert('מצב עריכה: כל תיבה עם קו מקווקו אפשר לערוך')">&#9999;&#65039; מצב עריכה</div>
 
-    <h3>❌ חסר — חובה להירשם עכשיו!</h3>
-    <table>
-        <tr><th>קוד</th><th>מקצוע</th><th>יחידות</th><th>מועד א'</th><th>מועד ב'</th></tr>
-        <tr style="background:rgba(231,76,60,0.1)"><td>16471</td><td>אנגלית — אוצר מילים E</td><td>0</td><td>18-19.05.2026</td><td>30.06.2026</td></tr>
-        <tr style="background:rgba(231,76,60,0.1)"><td>16382</td><td>אנגלית ג (מודול C)</td><td>0</td><td>18-19.05.2026</td><td>30.06.2026</td></tr>
-        <tr style="background:rgba(231,76,60,0.1)"><td>35481</td><td>מתמטיקה חלק 1</td><td>3</td><td>12.05.2026</td><td>06-09.07.2026</td></tr>
-        <tr style="background:rgba(231,76,60,0.1)"><td>35482</td><td>מתמטיקה חלק 2</td><td>0</td><td>13.05.2026</td><td>06-09.07.2026</td></tr>
-        <tr style="background:rgba(231,76,60,0.1)"><td>22262</td><td>היסטוריה</td><td>0</td><td>01.06.2026</td><td>—</td></tr>
-    </table>
-    <p><span class="tag tag-yellow">⚠️ חשוב:</span> מודול D אנגלית (16484) מסומן כרשום בתמונה, אבל מודול C ומודול E לא!</p>
-</section>
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+        <h1>&#127891; עידו — תוכנית רפואה באירופה</h1>
+        <p>תוכנית מקיפה: בגרויות + פסיכולוגיה + IMAT = רפואה באיטליה</p>
+        <p style="font-size: 0.9em; color: #888; margin-top: 15px;">נוצר: 08.03.2026 | עודכן: 15.03.2026 | גרסה 2.0 — כולל תוכנית חיים מלאה</p>
+    </div>
 
-<!-- 3. EXAM CALENDAR -->
-<section id="exam-calendar">
-    <h2>3. לוח מבחנים מלא — קיץ 2026</h2>
-    <p><em>מקורות: bagrut.gool.co.il, High-Q, Hannah Senesh, melumad.co.il | טיוטה 28.05.25</em></p>
+    <!-- ===== 1. SITUATION ===== -->
+    <section id="situation">
+        <h2>1. המצב שלך — סיכום</h2>
 
-    <h3>☀️ מועד א' (מאי-יוני 2026)</h3>
-    <table>
-        <tr><th>תאריך</th><th>מקצוע</th><th>קוד</th><th>רלוונטי?</th></tr>
-        <tr><td>27.04.2026</td><td>ספרות</td><td>8281</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td><strong>12.05.2026</strong></td><td><strong>מתמטיקה חלק 1</strong></td><td>35371/35481</td><td><span class="tag tag-red">❌ חסר!</span></td></tr>
-        <tr><td><strong>13.05.2026</strong></td><td><strong>מתמטיקה חלק 2</strong></td><td>35372/35482</td><td><span class="tag tag-red">❌ חסר!</span></td></tr>
-        <tr><td><strong>18-19.05.2026</strong></td><td><strong>אנגלית (כל המודולים)</strong></td><td>16471/16382/16484</td><td><span class="tag tag-red">❌ חסר!</span></td></tr>
-        <tr><td>28.05.2026</td><td>תנ"ך</td><td>1261</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>01.06.2026</td><td>היסטוריה</td><td>22261/22262</td><td><span class="tag tag-yellow">⚠️ לבדוק</span></td></tr>
-        <tr><td>08.06.2026</td><td>ביולוגיה</td><td>43381</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>10-11.06.2026</td><td>אזרחות</td><td>34281</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-        <tr><td>21-22.06.2026</td><td>כימיה</td><td>37381</td><td><span class="tag tag-green">✅ רשום</span></td></tr>
-    </table>
+        <h3>&#128100; מי אתה</h3>
+        <ul>
+            <li>סטודנט לפסיכולוגיה באוניברסיטה הפתוחה</li>
+            <li>קורסים נוכחיים: <strong>אישיות: תאוריה ומחקר (10269)</strong> + <strong>פסיכולוגיה פיזיולוגית (10615)</strong></li>
+            <li><strong>2 עבודות סמינריוניות</strong> לכתוב עד סוף הסמסטר</li>
+            <li>דרכון פולני (EU) — יתרון ענק!</li>
+        </ul>
 
-    <h3>🔄 מועד ב' (יוני-יולי 2026) — רק 3 מקצועות!</h3>
-    <table>
-        <tr><th>תאריך</th><th>מקצוע</th><th>הערה</th></tr>
-        <tr><td>30.06.2026</td><td>אנגלית</td><td>גיבוי אם לא עבר במועד א'</td></tr>
-        <tr><td>06-09.07.2026</td><td>מתמטיקה</td><td>גיבוי אם לא עבר במועד א'</td></tr>
-        <tr><td>30.06.2026</td><td>עברית</td><td>—</td></tr>
-    </table>
+        <h3>&#127919; היעד</h3>
+        <ul>
+            <li>לימודי רפואה באירופה (6 שנים)</li>
+            <li>התחלה מתוכננת: אוקטובר 2027</li>
+            <li>יעד ראשי: איטליה (IMAT) — פחות מ-1,000&#8364;/שנה עם EU</li>
+        </ul>
 
-    <h3>❄️ חורף 2027 — טרם פורסם</h3>
-    <p>צפוי: דצמבר 2026 – ינואר 2027 | פרסום: ספטמבר 2026</p>
-    <p>מקצועות צפויים: מתמטיקה, אנגלית, עברית, תנ"ך, היסטוריה, אזרחות</p>
-    <p><strong>אין כימיה / ביולוגיה / פיזיקה בחורף!</strong></p>
+        <h3>&#10060; מה חסר</h3>
+        <ul>
+            <li>בגרות: אנגלית (3 מודולים) + מתמטיקה (3 יח"ל)</li>
+            <li>מבחן IMAT (ספטמבר 2027)</li>
+            <li>2 בחינות פסיכולוגיה + 2 עבודות סמינריוניות</li>
+        </ul>
 
-    <h3>📊 זמינות לפי מקצוע</h3>
-    <table>
-        <tr><th>מקצוע</th><th>חורף ❄️</th><th>קיץ א' ☀️</th><th>קיץ ב' 🔄</th></tr>
-        <tr><td>מתמטיקה</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>אנגלית</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>כימיה</td><td>❌</td><td>✅</td><td>❌</td></tr>
-        <tr><td>ביולוגיה</td><td>❌</td><td>✅</td><td>❌</td></tr>
-        <tr><td>היסטוריה</td><td>✅</td><td>✅</td><td>❌</td></tr>
-    </table>
-</section>
+        <h3>&#128197; מפגשים קרובים</h3>
+        <table>
+            <thead><tr><th>תאריך</th><th>קורס</th><th>סוג</th><th>מיקום</th><th>שעות</th></tr></thead>
+            <tbody>
+                <tr><td><strong>15.03.2026</strong></td><td>אישיות: תאוריה ומחקר (10269)</td><td>מפגש בהנחיה מקוונת</td><td>מקוון (קבוצה 11)</td><td>09:00-11:00</td></tr>
+                <tr><td><strong>30.03.2026</strong></td><td>פסיכולוגיה פיזיולוגית (10615)</td><td>מפגש מולטימדיה</td><td>קמפוס רמת אביב (קבוצה 10)</td><td>08:30-11:00</td></tr>
+            </tbody>
+        </table>
+    </section>
 
-<!-- 4. EXAM CONTENT + MATERIALS -->
-<section id="exam-content">
-    <h2>4. תכני המבחנים — חומרים + זמן הכנה</h2>
+    <!-- ===== 2. BAGRUT ===== -->
+    <section id="bagrut">
+        <h2>2. בגרויות — סטטוס מלא</h2>
 
-    <!-- ENGLISH -->
-    <details open>
-        <summary>🇬🇧 אנגלית — 4 יחידות (3 שאלונים) &nbsp; <span class="time-badge">⏱️ 3-4 חודשים | 1.5-2 שעות/יום</span></summary>
-        <div>
-            <h4>מודול C (שאלון 16382) — 27% מהציון</h4>
-            <ul>
-                <li>הבנת הנקרא (70%): טקסט 280-320 מילים, בחירה מרובה + פתוחות</li>
-                <li>כתיבה (30%): חיבור 70-90 מילים</li>
-                <li>משך: שעה ו-15 דקות</li>
-            </ul>
+        <h3>&#9989; כבר רשום / הושלם</h3>
+        <table>
+            <thead><tr><th>קוד</th><th>מקצוע</th><th>סטטוס</th></tr></thead>
+            <tbody>
+                <tr><td>37382</td><td>כימיה</td><td>&#9989; רשום</td></tr>
+                <tr><td>37381</td><td>כימיה</td><td>&#9989; רשום</td></tr>
+                <tr><td>37282</td><td>כימיה</td><td>&#9989; רשום</td></tr>
+                <tr><td>8281</td><td>ספרות</td><td>&#9989; רשום</td></tr>
+                <tr><td>43381</td><td>ביולוגיה</td><td>&#9989; רשום</td></tr>
+                <tr><td>34281</td><td>אזרחות</td><td>&#9989; רשום</td></tr>
+                <tr><td>34282</td><td>אזרחות</td><td>&#9989; רשום</td></tr>
+                <tr><td>16484</td><td>אנגלית (מודול D)</td><td>&#9989; רשום</td></tr>
+                <tr><td>1261</td><td>תנ"ך</td><td>&#9989; רשום</td></tr>
+            </tbody>
+        </table>
 
-            <h4>מודול D (שאלון 16484) — ספרות</h4>
-            <ul>
-                <li>הבנת הנקרא (70%): ניתוח טקסט</li>
-                <li>חיבור (30%): 100-120 מילים על נושא ספרותי</li>
-                <li>ספרות חובה: סיפורים קצרים ושירים מתוכנית הלימודים</li>
-            </ul>
+        <h3>&#10060; חסר — חובה להירשם עכשיו!</h3>
+        <table>
+            <thead><tr><th>קוד</th><th>מקצוע</th><th>מועד א'</th><th>מועד ב'</th></tr></thead>
+            <tbody>
+                <tr><td>16471</td><td>אנגלית — אוצר מילים E</td><td>18-19.05.2026</td><td>30.06.2026</td></tr>
+                <tr><td>16382</td><td>אנגלית ג (מודול C)</td><td>18-19.05.2026</td><td>30.06.2026</td></tr>
+                <tr><td>35481</td><td>מתמטיקה חלק 1</td><td>12.05.2026</td><td>06-09.07.2026</td></tr>
+                <tr><td>35482</td><td>מתמטיקה חלק 2</td><td>13.05.2026</td><td>06-09.07.2026</td></tr>
+                <tr><td>22262</td><td>היסטוריה</td><td>01.06.2026</td><td>—</td></tr>
+            </tbody>
+        </table>
+    </section>
 
-            <h4>מודול E (שאלון 16471)</h4>
-            <ul>
-                <li>הבנת הנקרא (70%): טקסט לא מוכר + שאלות</li>
-                <li>הבנת הנשמע (30%): Listening Comprehension</li>
-                <li>משך: שעה ו-15 דקות</li>
-            </ul>
+    <!-- ===== 3. EXAM CALENDAR ===== -->
+    <section id="exam-calendar">
+        <h2>3. לוח מבחנים מלא — קיץ 2026</h2>
 
-            <h4>+ בחינה בע"פ (Oral Bagrut): הצגת פרויקט + ראיון</h4>
+        <h3>&#9728;&#65039; מועד א' (מאי-יוני 2026)</h3>
+        <table>
+            <thead><tr><th>תאריך</th><th>מקצוע</th><th>קוד</th><th>סטטוס</th></tr></thead>
+            <tbody>
+                <tr><td>27.04.2026</td><td>ספרות</td><td>8281</td><td>&#9989; רשום</td></tr>
+                <tr><td><strong>12.05.2026</strong></td><td><strong>מתמטיקה חלק 1</strong></td><td>35371/35481</td><td>&#10060; חסר!</td></tr>
+                <tr><td><strong>13.05.2026</strong></td><td><strong>מתמטיקה חלק 2</strong></td><td>35372/35482</td><td>&#10060; חסר!</td></tr>
+                <tr><td><strong>18-19.05.2026</strong></td><td><strong>אנגלית (כל המודולים)</strong></td><td>16471/16382/16484</td><td>&#10060; חסר!</td></tr>
+                <tr><td>28.05.2026</td><td>תנ"ך</td><td>1261</td><td>&#9989; רשום</td></tr>
+                <tr><td>01.06.2026</td><td>היסטוריה</td><td>22261/22262</td><td>&#9888;&#65039; לבדוק</td></tr>
+                <tr><td>08.06.2026</td><td>ביולוגיה</td><td>43381</td><td>&#9989; רשום</td></tr>
+                <tr><td>10-11.06.2026</td><td>אזרחות</td><td>34281</td><td>&#9989; רשום</td></tr>
+                <tr><td>21-22.06.2026</td><td>כימיה</td><td>37381</td><td>&#9989; רשום</td></tr>
+            </tbody>
+        </table>
 
-            <div class="resource-box">
-                <h4>📚 חומרי לימוד מומלצים</h4>
+        <h3>&#128260; מועד ב' (יוני-יולי 2026)</h3>
+        <table>
+            <thead><tr><th>תאריך</th><th>מקצוע</th><th>הערה</th></tr></thead>
+            <tbody>
+                <tr><td>30.06.2026</td><td>אנגלית</td><td>גיבוי אם לא עבר במועד א'</td></tr>
+                <tr><td>06-09.07.2026</td><td>מתמטיקה</td><td>גיבוי אם לא עבר במועד א'</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ===== 4. EXAM CONTENT ===== -->
+    <section id="exam-content">
+        <h2>4. תכני המבחנים — חומרים + זמן הכנה</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>&#127468;&#127463; אנגלית — 4 יחידות (3 שאלונים)</h3>
+                <p><span class="time-badge">&#9201;&#65039; 3-4 חודשים | 1.5-2 שעות/יום</span></p>
+
+                <h4>מודול C (שאלון 16382) — 27% מהציון</h4>
                 <ul>
-                    <li><a href="https://www.geva.co.il/bagrut_solution/english/">Yoel Geva — בגרויות ישנות עם פתרונות</a></li>
-                    <li><a href="https://www.kidum.com/bagruiot-solution/">Kidum — פתרונות בגרויות</a></li>
-                    <li>ספר: "Exam Practice for Module E" (Teacher's Edition)</li>
+                    <li>הבנת הנקרא (70%): טקסט 280-320 מילים</li>
+                    <li>כתיבה (30%): חיבור 70-90 מילים</li>
+                    <li>משך: שעה ו-15 דקות</li>
+                </ul>
+
+                <h4>מודול D (שאלון 16484) — ספרות</h4>
+                <ul>
+                    <li>הבנת הנקרא (70%): ניתוח טקסט</li>
+                    <li>חיבור (30%): 100-120 מילים על נושא ספרותי</li>
+                </ul>
+
+                <h4>מודול E (שאלון 16471)</h4>
+                <ul>
+                    <li>הבנת הנקרא (70%): טקסט לא מוכר</li>
+                    <li>הבנת הנשמע (30%): Listening</li>
+                </ul>
+
+                <h4>&#128218; חומרי לימוד</h4>
+                <ul>
+                    <li><a href="https://www.geva.co.il/bagrut_solution/english/">Yoel Geva — בגרויות ישנות</a></li>
+                    <li><a href="https://www.kidum.com/bagruiot-solution/">Kidum — פתרונות</a></li>
                     <li>ספר מיקוד: סיכומי ספרות חובה</li>
-                    <li><a href="https://matic.co.il/">Matic.co.il — קורס אנגלית 4 יחידות</a></li>
+                    <li><a href="https://matic.co.il/">Matic.co.il — קורס אנגלית</a></li>
                     <li><a href="https://meyda.education.gov.il/files/pop/0files/english/Chativa-Elyona/Bagrut/updates/4pointsbooklet2025.pdf">חוברת רשמית 4 יח"ל (PDF)</a></li>
                 </ul>
             </div>
 
-            <h4>📅 תוכנית הכנה (10 שבועות)</h4>
-            <table>
-                <tr><th>שבועות</th><th>פוקוס</th><th>שעות/יום</th></tr>
-                <tr><td>1-3</td><td>מודול C: אוצר מילים + הבנת הנקרא + כתיבה</td><td>1.5</td></tr>
-                <tr><td>4-6</td><td>מודול D: ספרות חובה (סיפורים + שירים) + ניתוח</td><td>1.5</td></tr>
-                <tr><td>7-8</td><td>מודול E: Listening + Reading מתקדם</td><td>2</td></tr>
-                <tr><td>9-10</td><td>תרגול בגרויות ישנות + סימולציות</td><td>2</td></tr>
-            </table>
-        </div>
-    </details>
+            <div class="card">
+                <h3>&#128290; מתמטיקה — 3 יחידות (2 שאלונים)</h3>
+                <p><span class="time-badge">&#9201;&#65039; 4-5 חודשים | 2 שעות/יום</span></p>
 
-    <!-- MATH -->
-    <details>
-        <summary>🔢 מתמטיקה — 3 יחידות (2 שאלונים) &nbsp; <span class="time-badge">⏱️ 4-5 חודשים | 2 שעות/יום</span></summary>
-        <div>
-            <h4>שאלון 35481 (65% מהציון) — 3.5 שעות</h4>
-            <ul>
-                <li>8 שאלות, לענות על 5</li>
-                <li>אלגברה: משוואות, מערכות, פירוק, בעיות מילוליות</li>
-                <li>גיאומטריה אנליטית: קטעים, ישרים, שטחים</li>
-                <li>הסתברות וסטטיסטיקה</li>
-            </ul>
-
-            <h4>שאלון 35482 (35% מהציון) — 2 שעות</h4>
-            <ul>
-                <li>5 שאלות, לענות על 3</li>
-                <li>סדרות וטורים</li>
-                <li>חשבון דיפרנציאלי (בסיסי)</li>
-                <li>טריגונומטריה</li>
-                <li>פונקציות אקספוננציאליות ולוגריתמיות</li>
-            </ul>
-
-            <div class="resource-box">
-                <h4>📚 חומרי לימוד מומלצים</h4>
+                <h4>שאלון 35481 (65% מהציון) — 3.5 שעות</h4>
                 <ul>
-                    <li><a href="https://www.bennygoren.co.il/">Benny Goren — שיעורים + תרגילים (חינם!)</a></li>
-                    <li><a href="https://www.geva.co.il/bagrut_solution/math/">Yoel Geva — פתרונות בגרויות</a></li>
-                    <li><a href="https://www.melumad.co.il/">Melumad — קורס מתמטיקה מקוון</a></li>
-                    <li><a href="https://www.kidum.com/">Kidum — קורסי הכנה</a></li>
-                    <li>ספר: מיקוד מתמטיקה 3 יח"ל (יואל גבע)</li>
+                    <li>8 שאלות, לענות על 5</li>
+                    <li>אלגברה, גיאומטריה אנליטית, הסתברות</li>
                 </ul>
+
+                <h4>שאלון 35482 (35% מהציון) — 2 שעות</h4>
+                <ul>
+                    <li>5 שאלות, לענות על 3</li>
+                    <li>סדרות, חשבון דיפרנציאלי, טריגונומטריה</li>
+                </ul>
+
+                <h4>&#128218; חומרי לימוד</h4>
+                <ul>
+                    <li><a href="https://www.bennygoren.co.il/">Benny Goren — חינם!</a></li>
+                    <li><a href="https://www.geva.co.il/bagrut_solution/math/">Yoel Geva — פתרונות</a></li>
+                    <li><a href="https://www.melumad.co.il/">Melumad — קורס מקוון</a></li>
+                </ul>
+
+                <p><strong>&#128161; אופציה:</strong> 4 קורסים אקדמאים בפתוחה = פטור מבגרות + בונוס 20%</p>
             </div>
-
-            <h4>📅 תוכנית הכנה (16 שבועות)</h4>
-            <table>
-                <tr><th>שבועות</th><th>נושא</th><th>שעות/יום</th></tr>
-                <tr><td>1-4</td><td>אלגברה בסיסית: משוואות, אי-שוויונות, פירוק</td><td>2</td></tr>
-                <tr><td>5-8</td><td>גיאומטריה אנליטית + הסתברות</td><td>2</td></tr>
-                <tr><td>9-12</td><td>סדרות, טריגונומטריה, חשבון דיפרנציאלי</td><td>2</td></tr>
-                <tr><td>13-16</td><td>תרגול בגרויות ישנות + סימולציות</td><td>2.5</td></tr>
-            </table>
-
-            <p style="margin-top:12px"><span class="tag tag-cyan">💡 אופציה:</span> אפשר להחליף מתמטיקה ב-4 קורסים אקדמאים באוניברסיטה הפתוחה (+ בונוס 20%) — ראה סעיף 5</p>
         </div>
-    </details>
 
-    <!-- IMAT -->
-    <details>
-        <summary>🏥 IMAT — מבחן כניסה לרפואה באיטליה &nbsp; <span class="time-badge">⏱️ 6-9 חודשים | 2-4 שעות/יום</span></summary>
-        <div>
-            <h4>מבנה המבחן</h4>
+        <div class="card">
+            <h3>&#127973; IMAT — מבחן כניסה לרפואה באיטליה</h3>
+            <p><span class="time-badge">&#9201;&#65039; 6-9 חודשים | 2-4 שעות/יום</span></p>
+
+            <h4>מבנה המבחן (60 שאלות, 100 דקות)</h4>
             <table>
-                <tr><th>חלק</th><th>שאלות</th><th>נושאים</th></tr>
-                <tr><td>Logical Reasoning</td><td>10</td><td>חשיבה לוגית, ניתוח טיעונים</td></tr>
-                <tr><td>General Knowledge</td><td>12</td><td>תרבות, היסטוריה, אקטואליה</td></tr>
-                <tr><td>Biology</td><td>18</td><td>ביולוגיה של התא, גנטיקה, אנטומיה, פיזיולוגיה</td></tr>
-                <tr><td>Chemistry</td><td>12</td><td>כימיה כללית + אורגנית</td></tr>
-                <tr><td>Physics + Math</td><td>8</td><td>מכניקה, חשמל, אופטיקה, מתמטיקה</td></tr>
+                <thead><tr><th>חלק</th><th>שאלות</th><th>נושאים</th></tr></thead>
+                <tbody>
+                    <tr><td>Reading Skills & General Knowledge</td><td>~4</td><td>הבנת הנקרא, תרבות כללית</td></tr>
+                    <tr><td>Logical Reasoning</td><td>~5</td><td>חשיבה לוגית, ניתוח טיעונים</td></tr>
+                    <tr><td>Biology</td><td>~23</td><td>תא, גנטיקה, אנטומיה, פיזיולוגיה</td></tr>
+                    <tr><td>Chemistry</td><td>~15</td><td>כימיה כללית + אורגנית</td></tr>
+                    <tr><td>Physics + Math</td><td>~13</td><td>מכניקה, חשמל, אופטיקה, מתמטיקה</td></tr>
+                </tbody>
             </table>
-            <p>60 שאלות ב-100 דקות | נכון: +1.5 | טעות: -0.4 | ריק: 0 | מקסימום: 90</p>
+
+            <p><strong>ניקוד: +1.5 נכון | -0.4 טעות | 0 ריק | מקסימום: 90</strong></p>
+            <p><strong>Tiebreaker:</strong> ביולוגיה > כימיה > פיזיקה/מתמטיקה > לוגיקה > Reading. אם שווה — הצעיר מנצח.</p>
             <p><strong>מועד: ספטמבר 2027</strong> (פעם בשנה) | הרשמה: יולי 2027 ב-<a href="https://www.universitaly.it">universitaly.it</a></p>
+        </div>
+    </section>
 
-            <div class="resource-box">
-                <h4>📚 חומרי לימוד — IMAT</h4>
+    <!-- ===== 5. OPEN UNI ===== -->
+    <section id="open-uni">
+        <h2>5. האוניברסיטה הפתוחה — קורסים ומסלולים</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>&#129516; ביולוגיה</h3>
                 <ul>
-                    <li><strong>ביולוגיה:</strong> Pearson Biology: A Global Approach (הספר #1!) + Campbell Biology</li>
-                    <li><strong>כימיה:</strong> Cambridge IGCSE Chemistry + Zumdahl Chemistry</li>
-                    <li><strong>פיזיקה:</strong> Schaum's Outline of College Physics</li>
-                    <li><strong>לוגיקה:</strong> Thinking Skills Coursebook (Marc Dawes, Cambridge) — הכי מומלץ!</li>
-                    <li><strong>מתמטיקה:</strong> SAT Maths for Dummies</li>
-                    <li><a href="https://www.entermedschool.com/imat">EnterMedSchool — מדריך חינמי מקיף</a></li>
-                    <li><a href="https://www.entermedschool.com/imat-papers">IMAT Past Papers 2011-2025 (חינם!)</a></li>
-                    <li><a href="https://www.imatbuddy.com/imat-past-papers/">IMAT Buddy — בגרויות ישנות + פתרונות</a></li>
-                    <li><a href="https://www.entermedschool.com/imat-study-planner">EnterMedSchool Study Planner</a></li>
-                    <li><a href="https://www.acadimat.com/best-resources-for-the-imat/">Acadimat — Best Resources</a></li>
-                    <li><a href="https://medschool.it/blog/imat-books-and-preparation-tips-for-2026/">Testbusters — Tips 2026</a></li>
+                    <li>ביולוגיה כללית</li>
+                    <li>ביולוגיה של התא</li>
+                    <li>גנטיקה</li>
+                    <li>פיזיולוגיה של מערכות האדם</li>
+                    <li>ביוכימיה</li>
                 </ul>
             </div>
-
-            <h4>📅 תוכנית הכנה מפורטת (9 חודשים: ינואר-ספטמבר 2027)</h4>
-            <table>
-                <tr><th>חודשים</th><th>נושאים</th><th>ספרים</th><th>שעות/יום</th></tr>
-                <tr><td>ינו'-פבר' 2027</td><td>ביולוגיה (תא, גנטיקה, DNA)</td><td>Pearson Biology פרקים 1-15</td><td>2</td></tr>
-                <tr><td>מרץ-אפר' 2027</td><td>ביולוגיה (פיזיולוגיה) + כימיה (כללית)</td><td>Pearson פרקים 16-30 + Cambridge IGCSE</td><td>2.5</td></tr>
-                <tr><td>מאי-יוני 2027</td><td>כימיה (אורגנית) + פיזיקה + מתמטיקה</td><td>Zumdahl + Schaum's + SAT Maths</td><td>3</td></tr>
-                <tr><td>יולי 2027</td><td>Logical Reasoning + General Knowledge</td><td>Thinking Skills (Dawes)</td><td>3</td></tr>
-                <tr><td>אוג'-ספט' 2027</td><td>Past Papers + סימולציות + חזרה</td><td>כל ה-Past Papers (2011-2025)</td><td>4</td></tr>
-            </table>
+            <div class="card">
+                <h3>&#9879;&#65039; כימיה</h3>
+                <ul>
+                    <li>כימיה כללית</li>
+                    <li>כימיה אורגנית</li>
+                    <li>ביוכימיה</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>&#128290; מתמטיקה (תחליף בגרות!)</h3>
+                <ul>
+                    <li>4 קורסים = פטור מבגרות מתמטיקה</li>
+                    <li>+ בונוס 20% על הציון!</li>
+                    <li>טלפון: *3500 לבירור</li>
+                </ul>
+            </div>
         </div>
-    </details>
-</section>
 
-<!-- 5. OPEN UNIVERSITY -->
-<section id="open-uni">
-    <h2>5. האוניברסיטה הפתוחה — קורסים ומסלולים</h2>
+        <h3>&#128260; המרת בגרויות דרך הפתוחה</h3>
+        <table>
+            <thead><tr><th>מקצוע</th><th>אפשר?</th><th>איך</th></tr></thead>
+            <tbody>
+                <tr><td>מתמטיקה</td><td>&#9989; כן</td><td>4 קורסים אקדמאים + בונוס 20%</td></tr>
+                <tr><td>ביולוגיה</td><td>&#9989; כן</td><td>ברשימה המאושרת</td></tr>
+                <tr><td>כימיה</td><td>&#9989; כן</td><td>ברשימה המאושרת</td></tr>
+                <tr><td>אנגלית</td><td>&#10060; לא</td><td>חובה בגרות!</td></tr>
+            </tbody>
+        </table>
+    </section>
 
-    <h3>📋 קורסי Pre-Med מומלצים</h3>
-    <div class="card-grid">
-        <div class="card">
-            <h3>🧬 ביולוגיה</h3>
+    <!-- ===== 6. PSYCHOLOGY ===== -->
+    <section id="psych">
+        <h2>6. פסיכולוגיה — קורסים + עבודות סמינריוניות</h2>
+
+        <h3>&#128218; קורסים נוכחיים — סמסטר 2026ב</h3>
+        <div class="card-grid">
+            <div class="card">
+                <h3>&#129504; אישיות: תאוריה ומחקר (10269)</h3>
+                <ul>
+                    <li><strong>מפגש הנחיה:</strong> 15.03.2026, 09:00-11:00 (מקוון)</li>
+                    <li>קבוצה 11, מרכז לימוד הנחיה מקוונת (780)</li>
+                    <li>נדרש: קריאת חומר + השתתפות במפגשים</li>
+                    <li><strong>עבודה סמינריונית #1</strong> — לכתוב עד סוף הסמסטר</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>&#129504; פסיכולוגיה פיזיולוגית (10615)</h3>
+                <ul>
+                    <li><strong>מפגש מולטימדיה:</strong> 30.03.2026, 08:30-11:00</li>
+                    <li>קמפוס רמת אביב, קבוצה 10</li>
+                    <li>נושאים: מערכת העצבים, נוירוטרנסמיטרים, מוח</li>
+                    <li><strong>עבודה סמינריונית #2</strong> — לכתוב עד סוף הסמסטר</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>&#128221; תוכנית לעבודות הסמינריוניות</h3>
+        <table>
+            <thead><tr><th>שלב</th><th>מתי</th><th>עבודה 1 (אישיות)</th><th>עבודה 2 (פיזיולוגית)</th></tr></thead>
+            <tbody>
+                <tr><td>בחירת נושא</td><td>מרץ</td><td>&#9989; לבחור נושא + מנחה</td><td>&#9989; לבחור נושא + מנחה</td></tr>
+                <tr><td>סקירת ספרות</td><td>אפריל</td><td>קריאת 10-15 מאמרים</td><td>קריאת 10-15 מאמרים</td></tr>
+                <tr><td>טיוטה ראשונה</td><td>מאי</td><td>כתיבת מבוא + שיטה</td><td>כתיבת מבוא + שיטה</td></tr>
+                <tr><td>טיוטה סופית</td><td>יוני</td><td>השלמה + עריכה</td><td>השלמה + עריכה</td></tr>
+                <tr><td>הגשה</td><td>יולי</td><td>&#128204; הגשה סופית</td><td>&#128204; הגשה סופית</td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>&#128161; טיפ:</strong> הקדש 3-4 שעות בשבוע לכל עבודה. ביוני-יולי תצטרך להגביר ל-6-8 שעות לסיום.</p>
+    </section>
+
+    <!-- ===== 7. RECOGNITION ===== -->
+    <section id="recognition">
+        <h2>7. הכרה בקורסים אקדמאים — האם מוכרים באירופה?</h2>
+
+        <div class="urgent-banner" style="position: static;">
+            <h2>&#9888;&#65039; הבהרה חשובה</h2>
+            <p>קורסים באוניברסיטה הפתוחה <strong>אינם מחליפים דרישות קבלה</strong> של אוניברסיטאות באירופה. הם:</p>
             <ul>
-                <li>ביולוגיה כללית</li>
-                <li>ביולוגיה של התא — מבנה ופעילות</li>
-                <li>גנטיקה</li>
-                <li>פיזיולוגיה של מערכות האדם</li>
-                <li>אימונולוגיה</li>
+                <li><strong>כן מחליפים</strong> בגרויות ישראליות (אישור משרד החינוך)</li>
+                <li><strong>כן מחזקים</strong> את המועמדות (הכנה אקדמית)</li>
+                <li><strong>לא נספרים</strong> כנקודות זכות בלימודי רפואה באירופה</li>
             </ul>
         </div>
-        <div class="card">
-            <h3>⚗️ כימיה</h3>
-            <ul>
-                <li>כימיה כללית</li>
-                <li>כימיה אורגנית</li>
-                <li>ביוכימיה</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>🔢 מתמטיקה (תחליף בגרות!)</h3>
-            <ul>
-                <li>4 קורסים אקדמאים = פטור מבגרות מתמטיקה</li>
-                <li>+ בונוס 20% על הציון!</li>
-                <li>טלפון: *3500 לבירור</li>
-            </ul>
-        </div>
-    </div>
+    </section>
 
-    <h3>🔄 המרת בגרויות דרך הפתוחה</h3>
-    <table>
-        <tr><th>מקצוע</th><th>אפשר להחליף?</th><th>איך</th><th>יתרון</th></tr>
-        <tr><td>מתמטיקה</td><td><span class="recognition-yes">✅ כן</span></td><td>4 קורסים אקדמאים</td><td>בונוס 20% + נקודות זכות</td></tr>
-        <tr><td>ביולוגיה</td><td><span class="recognition-yes">✅ כן</span></td><td>ברשימה המאושרת</td><td>נקודות זכות אקדמאיות</td></tr>
-        <tr><td>כימיה</td><td><span class="recognition-yes">✅ כן</span></td><td>ברשימה המאושרת</td><td>נקודות זכות אקדמאיות</td></tr>
-        <tr><td>אנגלית</td><td><span class="recognition-no">❌ לא</span></td><td>—</td><td>חובה לעשות בגרות!</td></tr>
-    </table>
+    <!-- ===== 8. UNIVERSITIES ===== -->
+    <section id="universities">
+        <h2>8. אוניברסיטאות באירופה — השוואה מלאה (25 אוניברסיטאות!)</h2>
 
-    <p><a href="https://www.openu.ac.il/young/program/pages/bagrut.aspx">🔗 אתר רשמי: המרת בגרויות</a> | <a href="https://academic.openu.ac.il/natural_sciences/life/pages/pre-med.aspx">🔗 מסלול Pre-Med</a></p>
-</section>
+        <h3>&#127470;&#127481; איטליה — IMAT (הכי זול עם EU!)</h3>
+        <table>
+            <thead><tr><th>#</th><th>אוניברסיטה</th><th>שכ"ל/שנה (EU)</th><th>מקומות EU</th><th>מבחן</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td><strong>Sapienza Roma</strong></td><td><strong>&lt;1,000&#8364;</strong></td><td>~45</td><td>IMAT</td></tr>
+                <tr><td>2</td><td><strong>Bologna</strong></td><td><strong>~3,000&#8364;</strong></td><td>~130</td><td>IMAT</td></tr>
+                <tr><td>3</td><td><strong>Milano Statale</strong></td><td><strong>156-4,115&#8364;</strong></td><td>~65</td><td>IMAT</td></tr>
+                <tr><td>4</td><td><strong>Pavia (Harvey)</strong></td><td><strong>~4,500&#8364;</strong></td><td>~103</td><td>IMAT</td></tr>
+                <tr><td>5</td><td>Padova</td><td>~2,500&#8364;</td><td>~75</td><td>IMAT</td></tr>
+                <tr><td>6</td><td>Torino (Orbassano)</td><td>~2,500&#8364;</td><td>~70</td><td>IMAT</td></tr>
+                <tr><td>7</td><td>Napoli Federico II</td><td>~1,500&#8364;</td><td>~25</td><td>IMAT</td></tr>
+                <tr><td>8</td><td>Bari (BEMC)</td><td>1,000-2,500&#8364;</td><td>—</td><td>IMAT</td></tr>
+            </tbody>
+        </table>
+        <p><strong>&#128161; שכר לימוד באיטליה מבוסס הכנסה (ISEE).</strong> משפחות עם הכנסה נמוכה — שכ"ל 0&#8364;!</p>
 
-<!-- 6. RECOGNITION -->
-<section id="recognition">
-    <h2>6. הכרה בקורסים אקדמאים — האם מוכרים באוניברסיטאות באירופה?</h2>
+        <h3>&#127479;&#127476; רומניה — בלי מבחן כניסה!</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה</th><th>מבחן</th><th>הערה</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Cluj-Napoca (Iuliu Hatieganu)</strong></td><td>6,500-7,500&#8364;</td><td><strong>אין!</strong> קבלה לפי ציונים</td><td>170 מקומות EU</td></tr>
+                <tr><td>Bucharest (Carol Davila)</td><td>8,500-10,000&#8364;</td><td>מבחן אנגלית</td><td>—</td></tr>
+            </tbody>
+        </table>
 
-    <div class="card" style="margin-bottom:20px; border-color: rgba(255,193,7,0.4)">
-        <h3 style="color:#ffc107">⚠️ הבהרה חשובה</h3>
-        <p>קורסים באוניברסיטה הפתוחה <strong>אינם מחליפים דרישות קבלה</strong> של אוניברסיטאות באירופה. הם:</p>
+        <h3>&#127463;&#127468; בולגריה — פשוט ומהיר</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה</th><th>מבחן</th></tr></thead>
+            <tbody>
+                <tr><td>Varna</td><td>7,000-8,000&#8364;</td><td>MCQ Bio + Chem</td></tr>
+                <tr><td>Plovdiv</td><td>8,000-9,000&#8364;</td><td>MCQ Bio + Chem</td></tr>
+                <tr><td>Sofia</td><td>~9,950&#8364;</td><td>MCQ Bio + Chem</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#127473;&#127481; ליטא</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה</th><th>מבחן</th></tr></thead>
+            <tbody>
+                <tr><td>Vilnius</td><td>11,000-13,000&#8364;</td><td>מקבלים IMAT/MCAT!</td></tr>
+                <tr><td>LSMU Kaunas</td><td>12,600-13,100&#8364;</td><td>MCQ Bio + Chem + ראיון</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#127469;&#127479; קרואטיה</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה</th><th>מבחן</th><th>הערה</th></tr></thead>
+            <tbody>
+                <tr><td>Zagreb</td><td>12,000&#8364;</td><td>120 MCQ (Bio/Chem/Phys)</td><td>&#9888;&#65039; מהשנה ה-4: קרואטית B1!</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#127477;&#127473; פולין (דרכון פולני = יתרון!)</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה (EN)</th><th>מבחן</th></tr></thead>
+            <tbody>
+                <tr><td>Warsaw (MUW)</td><td>13,000-14,000&#8364;</td><td>מבחן אנגלית בלבד</td></tr>
+                <tr><td>Poznan</td><td>12,000-13,500&#8364;</td><td>MCQ Bio + Chem</td></tr>
+                <tr><td>Lodz</td><td>14,200-15,000&#8364;</td><td>MCQ אונליין</td></tr>
+                <tr><td>Gdansk</td><td>~14,400&#8364;</td><td>MCQ Bio + Chem + ראיון</td></tr>
+            </tbody>
+        </table>
+        <p><strong>&#128161; עם דרכון פולני:</strong> לימודים <strong>בפולנית חינם!</strong> לימודים באנגלית — שכר לימוד מלא.</p>
+
+        <h3>&#127464;&#127487; צ'כיה</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה</th><th>מבחן</th></tr></thead>
+            <tbody>
+                <tr><td>Hradec Kralove</td><td>~16,000&#8364;</td><td>MCQ Bio/Chem/Phys</td></tr>
+                <tr><td>Pilsen</td><td>~16,000&#8364;</td><td>MCQ Bio/Chem/Phys</td></tr>
+                <tr><td>Prague 2nd Faculty</td><td>~17,000&#8364;</td><td>MCQ + MMI</td></tr>
+                <tr><td>Prague 1st Faculty</td><td>~17,000&#8364;</td><td>MCQ + ראיון</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#127469;&#127482; הונגריה</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה</th><th>מבחן</th></tr></thead>
+            <tbody>
+                <tr><td>Szeged</td><td>~15,800&#8364;</td><td>בחינה בע"פ (Bio/Chem)</td></tr>
+                <tr><td>Debrecen</td><td>~17,000&#8364;</td><td>MCQ + בע"פ</td></tr>
+                <tr><td>Pecs</td><td>~16,000&#8364;</td><td>אונליין + ראיון</td></tr>
+                <tr><td>Semmelweis (Budapest)</td><td>18,500-22,000&#8364;</td><td>MCQ + ראיון</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#127474;&#127483; סלובקיה + &#127473;&#127483; לטביה</h3>
+        <table>
+            <thead><tr><th>אוניברסיטה</th><th>שכ"ל/שנה</th><th>מבחן</th></tr></thead>
+            <tbody>
+                <tr><td>&#127474;&#127483; Bratislava (Comenius)</td><td>~13,000&#8364;</td><td>MCQ Bio + Chem</td></tr>
+                <tr><td>&#127474;&#127483; Kosice</td><td>~12,500&#8364;</td><td>200 MCQ (Bio + Chem) 2.5 שעות</td></tr>
+                <tr><td>&#127473;&#127483; Riga Stradins (RSU)</td><td>13,500-15,500&#8364;</td><td><strong>אין מבחן!</strong> קבלה לפי ציונים</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#127942; דירוג לפי עלות (EU)</h3>
+        <table>
+            <thead><tr><th>#</th><th>מדינה</th><th>טווח שכ"ל</th><th>למה?</th></tr></thead>
+            <tbody>
+                <tr style="background: rgba(0,200,83,0.1);"><td>1</td><td><strong>&#127470;&#127481; איטליה</strong></td><td><strong>0-4,000&#8364;</strong></td><td>הכי זול + מלגות + הכרה מלאה</td></tr>
+                <tr style="background: rgba(0,200,83,0.05);"><td>2</td><td>&#127479;&#127476; רומניה</td><td>6,500-10,000&#8364;</td><td>Cluj — בלי מבחן כניסה!</td></tr>
+                <tr><td>3</td><td>&#127463;&#127468; בולגריה</td><td>7,000-10,000&#8364;</td><td>קבלה פשוטה</td></tr>
+                <tr><td>4</td><td>&#127473;&#127481; ליטא</td><td>11,000-13,000&#8364;</td><td>Vilnius מקבל IMAT</td></tr>
+                <tr><td>5</td><td>&#127469;&#127479; קרואטיה</td><td>12,000&#8364;</td><td>איכות גבוהה</td></tr>
+                <tr><td>6</td><td>&#127474;&#127483; סלובקיה</td><td>12,500-13,000&#8364;</td><td>מרכז אירופה</td></tr>
+                <tr><td>7</td><td>&#127477;&#127473; פולין</td><td>12,000-15,000&#8364;</td><td>דרכון פולני = יתרון</td></tr>
+                <tr><td>8</td><td>&#127473;&#127483; לטביה</td><td>13,500-15,500&#8364;</td><td>בלי מבחן כניסה</td></tr>
+                <tr><td>9</td><td>&#127464;&#127487; צ'כיה</td><td>16,000-17,000&#8364;</td><td>מוניטין גבוה</td></tr>
+                <tr><td>10</td><td>&#127469;&#127482; הונגריה</td><td>15,800-22,000&#8364;</td><td>הרבה מועדי כניסה</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ===== 9. HOW TO APPLY ===== -->
+    <section id="how-to-apply">
+        <h2>9. איך נרשמים — שלב אחר שלב לכל מדינה</h2>
+
+        <details open>
+            <summary><span class="country-flag">&#127470;&#127481;</span> איטליה (IMAT) — תהליך הרשמה מלא</summary>
+            <div>
+                <ol class="step-list">
+                    <li><strong>יולי 2027:</strong> הרשמה באתר <a href="https://www.universitaly.it">Universitaly.it</a> — נפתח בדרך כלל בתחילת יולי</li>
+                    <li><strong>בחירת אוניברסיטאות:</strong> סדר עדיפויות (המערכת מדרגת לפי ציון IMAT)</li>
+                    <li><strong>תשלום:</strong> ~100&#8364; דמי הרשמה</li>
+                    <li><strong>הכנת מסמכים:</strong> תעודת בגרות (מתורגמת + אפוסטיל), דרכון EU, תמונת פספורט</li>
+                    <li><strong>אמצע ספטמבר 2027:</strong> מבחן IMAT — בישראל או באיטליה</li>
+                    <li><strong>אוקטובר 2027:</strong> פרסום דירוגים + הצעות קבלה באתר Universitaly</li>
+                    <li><strong>אישור מקום:</strong> אישור הרשמה + תשלום שכ"ל ראשון</li>
+                </ol>
+
+                <h4>&#128196; מסמכים נדרשים</h4>
+                <ul>
+                    <li>&#128274; דרכון EU (פולני) — תקף</li>
+                    <li>&#127891; תעודת בגרות מלאה + גיליון ציונים</li>
+                    <li>&#128220; תרגום נוטריוני לאיטלקית או אנגלית</li>
+                    <li>&#128203; אפוסטיל (מהאג) על תעודת הבגרות</li>
+                    <li>&#128247; תמונת פספורט</li>
+                    <li>&#128179; אישור תשלום דמי הרשמה</li>
+                </ul>
+
+                <h4>&#128176; שכר לימוד (מבוסס ISEE)</h4>
+                <table>
+                    <thead><tr><th>הכנסה משפחתית (ISEE)</th><th>שכר לימוד/שנה</th></tr></thead>
+                    <tbody>
+                        <tr><td>מתחת ל-23,000&#8364;</td><td><strong>0&#8364; (פטור מלא!)</strong></td></tr>
+                        <tr><td>23,000-30,000&#8364;</td><td>500-1,500&#8364;</td></tr>
+                        <tr><td>30,000-60,000&#8364;</td><td>1,500-3,000&#8364;</td></tr>
+                        <tr><td>מעל 60,000&#8364; / ללא ISEE</td><td>3,000-4,000&#8364;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="country-flag">&#127479;&#127476;</span> רומניה (Cluj — בלי מבחן!)</summary>
+            <div>
+                <ol class="step-list">
+                    <li>בקשה לאישור ממשרד החינוך הרומני (EU/EEA students)</li>
+                    <li>הגשת מועמדות באתר <a href="https://umfcluj.ro/en/">UMF Cluj</a> — מרץ עד יולי</li>
+                    <li>הגשת מסמכים: בגרות + ציונים בביולוגיה, כימיה + מקצוע נוסף</li>
+                    <li><strong>אין מבחן כניסה!</strong> קבלה לפי ממוצע ציונים</li>
+                    <li>מבחן שפה אנגלית לדוברים לא ילידים</li>
+                    <li>אישור + תשלום מפקדון (~5,000&#8364;)</li>
+                </ol>
+                <p><strong>170 מקומות EU | דדליין: ~יולי 2027</strong></p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="country-flag">&#127463;&#127468;</span> בולגריה (Sofia / Plovdiv / Varna)</summary>
+            <div>
+                <ol class="step-list">
+                    <li>הגשת מסמכים: יולי-אוגוסט</li>
+                    <li>מבחן כניסה: ספטמבר (MCQ ביולוגיה + כימיה באנגלית)</li>
+                    <li>קבלת תשובה: ספטמבר-אוקטובר</li>
+                    <li>תחילת לימודים: אוקטובר</li>
+                </ol>
+                <p><strong>Varna הכי זולה (7,000-8,000&#8364;/שנה)</strong></p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="country-flag">&#127469;&#127482;</span> הונגריה (Debrecen / Semmelweis / Pecs / Szeged)</summary>
+            <div>
+                <ol class="step-list">
+                    <li>הרשמה באתר האוניברסיטה — נפתח אוקטובר/נובמבר</li>
+                    <li>תשלום דמי הרשמה (200-350&#8364;)</li>
+                    <li>הגשת מסמכים + מכתב מוטיבציה</li>
+                    <li>מבחן כניסה: פברואר-יולי (מועדים מרובים, כולל אונליין!)</li>
+                    <li>ראיון (MMI-style ב-Semmelweis)</li>
+                    <li>קבלת תשובה תוך שבוע-שבועיים</li>
+                </ol>
+                <p><strong>יתרון:</strong> הרבה מועדי כניסה — אפשר לנסות כמה פעמים!</p>
+                <p><strong>דדליינים:</strong> Semmelweis ~מאי | Pecs ~יוני | Szeged ~יולי</p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="country-flag">&#127464;&#127487;</span> צ'כיה (Charles University)</summary>
+            <div>
+                <ol class="step-list">
+                    <li>הרשמה אונליין: 1 בנובמבר 2026</li>
+                    <li>דדליין הגשה: <strong>30 באפריל 2027</strong></li>
+                    <li>תשלום דמי הרשמה (~100&#8364;)</li>
+                    <li>מבחן כתוב: יוני 2027 (MCQ: Bio/Chem/Phys, מקסימום 300 נקודות)</li>
+                    <li>ראיון בע"פ (עד 30 נקודות)</li>
+                    <li>סף עובר: 244/330</li>
+                </ol>
+                <p><strong>Prague 1st Faculty = הכי קשה. Hradec Kralove = הכי נגיש.</strong></p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="country-flag">&#127473;&#127481;</span> ליטא (Vilnius / LSMU Kaunas)</summary>
+            <div>
+                <h4>Vilnius</h4>
+                <ol class="step-list">
+                    <li>הגשה באתר: <a href="https://apply.vu.lt/courses/course/8-medicine">apply.vu.lt</a></li>
+                    <li><strong>מקבלים ציון IMAT!</strong> — אם עידו ניגש ל-IMAT, אפשר להגיש גם לוילנה</li>
+                    <li>או: MCAT / SAT Biology</li>
+                    <li>דדליין: ~מאי 2027</li>
+                </ol>
+                <h4>LSMU Kaunas</h4>
+                <ol class="step-list">
+                    <li>הרשמה באתר + תשלום (150-200&#8364;)</li>
+                    <li>MCQ אונליין: 30 ביולוגיה + 30 כימיה (90 דקות)</li>
+                    <li>ראיון</li>
+                    <li>נדרש: TOEFL/IELTS</li>
+                </ol>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="country-flag">&#127477;&#127473;</span> פולין (עם דרכון פולני!)</summary>
+            <div>
+                <ol class="step-list">
+                    <li>הרשמה באתר האוניברסיטה</li>
+                    <li>מבחן כניסה: MCQ Bio + Chem (רוב האוניברסיטאות), אונליין אפשרי</li>
+                    <li>ראיון עם ועדת הקבלה</li>
+                    <li>Warsaw: רק מבחן אנגלית (בלי מדעים!)</li>
+                </ol>
+                <p><strong>&#128161; עם דרכון פולני:</strong> לימודים <strong>בפולנית — חינם!</strong> אבל צריך פולנית B2+</p>
+                <p>לימודים באנגלית — שכר מלא (12,000-15,000&#8364;) גם עם דרכון פולני.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="country-flag">&#127473;&#127483;</span> לטביה (Riga Stradins) — בלי מבחן!</summary>
+            <div>
+                <ol class="step-list">
+                    <li>הגשה באתר <a href="https://www.rsu.lv/en/study-here/admissions">RSU</a></li>
+                    <li><strong>אין מבחן כניסה!</strong> קבלה לפי ציוני בגרות (Bio, Chem, English, Physics)</li>
+                    <li>נדרש: IELTS/TOEFL (מינימום B2)</li>
+                    <li>2 מועדי כניסה: ספטמבר 2027 (~380 מקומות) + פברואר 2028 (~240 מקומות)</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+    <!-- ===== 10. BOOKS ===== -->
+    <section id="books">
+        <h2>10. כל הספרים שצריך — רשימת קניות מלאה</h2>
+
+        <h3>&#128214; שלב 1: בגרויות (מרץ-יולי 2026)</h3>
+        <table>
+            <thead><tr><th>ספר</th><th>למה</th><th>עלות</th></tr></thead>
+            <tbody>
+                <tr><td><strong>מיקוד אנגלית 4 יח"ל</strong> (ספר + חוברת ספרות)</td><td>בגרות אנגלית</td><td>~80&#8362;</td></tr>
+                <tr><td><strong>Exam Practice for Module E</strong> (Teacher's Edition)</td><td>תרגול מודול E + תשובות</td><td>~60&#8362;</td></tr>
+                <tr><td><strong>מיקוד מתמטיקה 3 יח"ל</strong> (יואל גבע)</td><td>בגרות מתמטיקה</td><td>~70&#8362;</td></tr>
+                <tr><td><a href="https://www.bennygoren.co.il/">Benny Goren אונליין</a></td><td>שיעורי מתמטיקה (חינם!)</td><td>&#128154; חינם</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#128214; שלב 2: הכנה ל-IMAT (יולי 2026 — ספטמבר 2027)</h3>
+        <table>
+            <thead><tr><th>ספר</th><th>מקצוע</th><th>חשיבות</th></tr></thead>
+            <tbody>
+                <tr style="background: rgba(0,200,83,0.08);"><td><strong>Campbell Biology: A Global Approach</strong> (Pearson, 12th ed)</td><td>&#129516; ביולוגיה</td><td>&#11088; חובה #1</td></tr>
+                <tr style="background: rgba(0,200,83,0.08);"><td><strong>CGP A-Level Chemistry</strong></td><td>&#9879;&#65039; כימיה</td><td>&#11088; חובה #2</td></tr>
+                <tr style="background: rgba(0,200,83,0.08);"><td><strong>Thinking Skills Coursebook</strong> (Marc Dawes, Cambridge)</td><td>&#129504; לוגיקה</td><td>&#11088; חובה #3</td></tr>
+                <tr><td><strong>IB Biology Course Companion</strong> (Oxford)</td><td>&#129516; ביולוגיה</td><td>&#128154; מומלץ — תמציתי</td></tr>
+                <tr><td><strong>IB Chemistry Study Guide</strong> (Oxford)</td><td>&#9879;&#65039; כימיה</td><td>&#128154; מומלץ — חזרה</td></tr>
+                <tr><td><strong>Barron's SAT Subject Test: Physics</strong></td><td>&#9889; פיזיקה</td><td>&#128154; רמה מתאימה</td></tr>
+                <tr><td><strong>SAT Maths for Dummies</strong></td><td>&#128290; מתמטיקה</td><td>&#128154; לחלק הכמותי</td></tr>
+                <tr><td><strong>The Ultimate IMAT Guide</strong> (UniAdmissions)</td><td>&#128218; תרגול</td><td>650 שאלות + פתרונות</td></tr>
+            </tbody>
+        </table>
+
+        <h3>&#128214; שלב 3: Past Papers (חינם!)</h3>
         <ul>
-            <li><strong>כן מחליפים</strong> בגרויות ישראליות (אישור משרד החינוך)</li>
-            <li><strong>כן מחזקים</strong> את המועמדות (הכנה אקדמית, ידע מוקדם)</li>
-            <li><strong>לא נספרים</strong> כנקודות זכות בלימודי רפואה באירופה</li>
+            <li><a href="https://www.entermedschool.com/imat-papers">EnterMedSchool — IMAT Past Papers 2011-2025</a></li>
+            <li><a href="https://www.imatbuddy.com/imat-past-papers/">IMAT Buddy — פתרונות מפורטים</a></li>
+            <li><a href="https://www.entermedschool.com/imat-study-planner">EnterMedSchool Study Planner</a></li>
         </ul>
-    </div>
 
-    <table>
-        <tr><th>אוניברסיטה</th><th>דרישת קבלה</th><th>קורסי פתוחה מוכרים?</th><th>הערה</th></tr>
-        <tr>
-            <td>איטליה (כל האוניברסיטאות)</td>
-            <td>בגרות מלאה + IMAT</td>
-            <td><span class="recognition-partial">חלקית</span></td>
-            <td>בגרות דרך הפתוחה מוכרת כבגרות ישראלית. IMAT חובה בנוסף.</td>
-        </tr>
-        <tr>
-            <td>Debrecen (הונגריה)</td>
-            <td>מבחן כניסה Bio/Chem/Phys</td>
-            <td><span class="recognition-partial">עקיף</span></td>
-            <td>לא מכירים בקורסים, אבל הם עוזרים בהכנה למבחן שלהם</td>
-        </tr>
-        <tr>
-            <td>Semmelweis (הונגריה)</td>
-            <td>מבחן כתוב + ראיון</td>
-            <td><span class="recognition-partial">עקיף</span></td>
-            <td>קורסי ביולוגיה/כימיה בפתוחה = הכנה מצוינת</td>
-        </tr>
-        <tr>
-            <td>LSMU Kaunas (ליטא)</td>
-            <td>מבחן MCQ Bio/Chem + ראיון</td>
-            <td><span class="recognition-no">לא</span></td>
-            <td>מבחן משלהם חובה, אבל הידע מהפתוחה רלוונטי</td>
-        </tr>
-        <tr>
-            <td>Vilnius (ליטא)</td>
-            <td>MCAT או IMAT</td>
-            <td><span class="recognition-partial">עקיף</span></td>
-            <td>מקבלים ציון IMAT — הקורסים עוזרים להכנה</td>
-        </tr>
-        <tr>
-            <td>צ'כיה (Prague, Hradec, Pilsen)</td>
-            <td>מבחן משלהם Bio/Chem/Phys</td>
-            <td><span class="recognition-no">לא</span></td>
-            <td>מבחן עצמאי חובה, אבל הבסיס מהפתוחה עוזר</td>
-        </tr>
-    </table>
+        <h3>&#128176; תקציב ספרים משוער</h3>
+        <table>
+            <thead><tr><th>שלב</th><th>עלות</th></tr></thead>
+            <tbody>
+                <tr><td>בגרויות (ספרי מיקוד)</td><td>~210&#8362;</td></tr>
+                <tr><td>IMAT (3 ספרי חובה)</td><td>~350-500&#8362;</td></tr>
+                <tr><td>IMAT (ספרים מומלצים)</td><td>~300-400&#8362;</td></tr>
+                <tr><td>Past Papers</td><td>&#128154; חינם</td></tr>
+                <tr><td><strong>סה"כ</strong></td><td><strong>~860-1,110&#8362;</strong></td></tr>
+            </tbody>
+        </table>
+    </section>
 
-    <div class="resource-box" style="margin-top:15px">
-        <h4>🎯 מסקנה עבור עידו</h4>
-        <p>הקורסים באוניברסיטה הפתוחה הם <strong>הכנה אקדמית מצוינת</strong> למבחני הכניסה (במיוחד ביולוגיה וכימיה), ומחליפים בגרויות ישראליות. אבל כל אוניברסיטה באירופה דורשת מבחן כניסה משלה בנוסף.</p>
-    </div>
-</section>
+    <!-- ===== 11. UNI EXAMS ===== -->
+    <section id="uni-exams">
+        <h2>11. מבחני כניסה — סיכום זמני הכנה</h2>
 
-<!-- 7. UNIVERSITIES -->
-<section id="universities">
-    <h2>7. אוניברסיטאות באירופה — השוואה מלאה</h2>
+        <table>
+            <thead><tr><th>מבחן</th><th>זמן הכנה</th><th>שעות/יום</th><th>ספרי ליבה</th></tr></thead>
+            <tbody>
+                <tr><td>&#127470;&#127481; IMAT (איטליה)</td><td>6-9 חודשים</td><td>2-4</td><td>Campbell Bio + CGP Chem + Dawes Logic</td></tr>
+                <tr><td>&#127469;&#127482; Debrecen</td><td>3-4 חודשים</td><td>2</td><td>Campbell Bio + CGP Chem + Schaum's Phys</td></tr>
+                <tr><td>&#127469;&#127482; Semmelweis</td><td>4-5 חודשים</td><td>2-3</td><td>Campbell Bio + Pearson Chem</td></tr>
+                <tr><td>&#127464;&#127487; צ'כיה</td><td>4-6 חודשים</td><td>2-3</td><td>Campbell Bio + CGP Chem + Schaum's Phys</td></tr>
+                <tr><td>&#127473;&#127481; LSMU</td><td>3 חודשים</td><td>1.5-2</td><td>כמו IMAT (Bio + Chem)</td></tr>
+                <tr><td>&#127463;&#127468; בולגריה</td><td>3-4 חודשים</td><td>2</td><td>Campbell Bio + CGP Chem</td></tr>
+                <tr><td>בגרות אנגלית</td><td>3-4 חודשים</td><td>1.5-2</td><td>מיקוד + בגרויות ישנות</td></tr>
+                <tr><td>בגרות מתמטיקה</td><td>4-5 חודשים</td><td>2</td><td>Benny Goren + מיקוד</td></tr>
+            </tbody>
+        </table>
 
-    <table>
-        <tr><th>#</th><th>מדינה / אוניברסיטה</th><th>שכ"ל/שנה (EU)</th><th>מבחן</th><th>שפה</th><th>מוכר בישראל</th></tr>
-        <tr style="background:rgba(0,200,83,0.1)"><td>1</td><td><strong>🇮🇹 Sapienza Roma</strong></td><td><strong>&lt;1,000€</strong></td><td>IMAT</td><td>EN</td><td>✅</td></tr>
-        <tr style="background:rgba(0,200,83,0.1)"><td>2</td><td><strong>🇮🇹 Bologna</strong></td><td><strong>~3,000€</strong></td><td>IMAT</td><td>EN</td><td>✅</td></tr>
-        <tr style="background:rgba(0,200,83,0.1)"><td>3</td><td><strong>🇮🇹 Milano Statale</strong></td><td><strong>156-4,115€</strong></td><td>IMAT</td><td>EN</td><td>✅</td></tr>
-        <tr style="background:rgba(0,200,83,0.1)"><td>4</td><td><strong>🇮🇹 Pavia</strong></td><td><strong>~4,500€</strong></td><td>IMAT</td><td>EN</td><td>✅</td></tr>
-        <tr><td>5</td><td>🇱🇹 Vilnius</td><td>~11,000€</td><td>IMAT/MCAT</td><td>EN</td><td>✅</td></tr>
-        <tr><td>6</td><td>🇭🇷 Zagreb</td><td>12,000€</td><td>משלהם</td><td>EN*</td><td>⚠️</td></tr>
-        <tr><td>7</td><td>🇱🇹 LSMU Kaunas</td><td>12,600-13,100€</td><td>MCQ Bio/Chem</td><td>EN</td><td>✅</td></tr>
-        <tr><td>8</td><td>🇨🇿 Hradec Králové</td><td>~12,400€</td><td>MCQ Bio/Chem/Phys</td><td>EN</td><td>✅</td></tr>
-        <tr><td>9</td><td>🇨🇿 Pilsen</td><td>~14,000€</td><td>משלהם</td><td>EN</td><td>✅</td></tr>
-        <tr><td>10</td><td>🇭🇺 Debrecen</td><td>~15,800€</td><td>Bio/Chem/Phys</td><td>EN</td><td>✅</td></tr>
-        <tr><td>11</td><td>🇭🇺 Pécs</td><td>~16,750$</td><td>משלהם</td><td>EN</td><td>✅</td></tr>
-        <tr><td>12</td><td>🇨🇿 Prague 2nd</td><td>~16,800€</td><td>MCQ + MMI</td><td>EN</td><td>✅</td></tr>
-        <tr><td>13</td><td>🇭🇺 Semmelweis</td><td>22-24,000€</td><td>כתוב + ראיון</td><td>EN</td><td>✅</td></tr>
-        <tr><td>14</td><td>🇨🇿 Prague 1st</td><td>24,250€</td><td>MCQ + ראיון</td><td>EN</td><td>✅</td></tr>
-    </table>
+        <p><strong>&#128161; טיפ חשוב:</strong> הספרים חופפים! אם עידו מתכונן ל-IMAT, הוא <strong>מכוסה ב-80%+</strong> גם ל-Debrecen, LSMU, Vilnius ובולגריה.</p>
+    </section>
 
-    <div class="card" style="border-color: rgba(0,200,83,0.4); margin-top:20px">
-        <h3 style="color:#00c853">🏆 ההמלצה: איטליה (Sapienza Roma)</h3>
+    <!-- ===== 12. YEARLY PLAN ===== -->
+    <section id="yearly-plan">
+        <h2>12. תוכנית שנתית מלאה — מרץ 2026 עד אוקטובר 2027</h2>
+
+        <div class="yearly-plan">
+            <div class="month">
+                <h4>&#128308; מרץ 2026 — דחוף!</h4>
+                <ul>
+                    <li>עד 20.03: הרשמה לבגרויות קיץ!</li>
+                    <li>15.03: מפגש אישיות (10269) מקוון</li>
+                    <li>30.03: מפגש פסיכולוגיה פיזיולוגית (10615) ת"א</li>
+                    <li>לקנות: ספר מיקוד אנגלית + Benny Goren מתמטיקה</li>
+                    <li>בחירת נושאי עבודות סמינריוניות</li>
+                </ul>
+                <p><strong>&#128218; 4-5 שעות/יום</strong> | אנגלית 2 + מתמטיקה 1.5 + פסיכולוגיה 1</p>
+            </div>
+
+            <div class="month">
+                <h4>&#128992; אפריל 2026</h4>
+                <ul>
+                    <li>אנגלית: מודול C (הבנת הנקרא + כתיבה)</li>
+                    <li>מתמטיקה: אלגברה + גיאומטריה</li>
+                    <li>פסיכולוגיה: מפגשים + סקירת ספרות לעבודות</li>
+                    <li>27.04: בגרות ספרות (כבר רשום)</li>
+                </ul>
+                <p><strong>&#128218; 6 שעות/יום</strong> | אנגלית 2 + מתמטיקה 2 + פסיכולוגיה 1.5 + עבודות 0.5</p>
+            </div>
+
+            <div class="month">
+                <h4>&#128308; מאי 2026 — בגרויות!</h4>
+                <ul>
+                    <li><strong>12.05:</strong> בגרות מתמטיקה חלק 1</li>
+                    <li><strong>13.05:</strong> בגרות מתמטיקה חלק 2</li>
+                    <li><strong>18-19.05:</strong> בגרות אנגלית (3 מודולים)</li>
+                    <li>28.05: בגרות תנ"ך</li>
+                    <li>טיוטה ראשונה — עבודות סמינריוניות</li>
+                </ul>
+                <p><strong>&#128218; 5-6 שעות/יום</strong> | חזרה אינטנסיבית</p>
+            </div>
+
+            <div class="month">
+                <h4>&#128992; יוני 2026</h4>
+                <ul>
+                    <li>01.06: בגרות היסטוריה | 08.06: ביולוגיה | 10-11.06: אזרחות</li>
+                    <li>21-22.06: כימיה | 30.06: מועד ב' אנגלית</li>
+                    <li>לסיים בחינות פסיכולוגיה</li>
+                    <li>כתיבת עבודות סמינריוניות — מאמץ מוגבר</li>
+                </ul>
+                <p><strong>&#128218; 4 שעות/יום</strong> | בגרויות + פסיכולוגיה + עבודות</p>
+            </div>
+
+            <div class="month">
+                <h4>&#128994; יולי 2026</h4>
+                <ul>
+                    <li>06-09.07: מועד ב' מתמטיקה (אם צריך)</li>
+                    <li><strong>הגשת 2 עבודות סמינריוניות!</strong></li>
+                    <li>רישום לקורסי Pre-Med בפתוחה</li>
+                    <li>לקנות: Campbell Biology + CGP Chemistry</li>
+                </ul>
+                <p><strong>&#128218; 2-3 שעות/יום</strong> | עבודות + קריאה חופשית</p>
+            </div>
+
+            <div class="month">
+                <h4>&#128994; אוגוסט 2026 — חופשה + מעבר</h4>
+                <ul>
+                    <li>חופשה קצרה (מגיע!)</li>
+                    <li>התחלת Campbell Biology — פרקים ראשונים</li>
+                    <li>אנגלית: סדרות + פודקאסטים</li>
+                </ul>
+                <p><strong>&#128218; 1-2 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#128995; ספטמבר 2026 — התחלת IMAT</h4>
+                <ul>
+                    <li>Campbell Biology: פרקים 1-8</li>
+                    <li>סמסטר א' בפתוחה: ביולוגיה + כימיה</li>
+                </ul>
+                <p><strong>&#128218; 3-4 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#128995; אוקטובר-נובמבר 2026</h4>
+                <ul>
+                    <li>Campbell Biology: פרקים 9-22</li>
+                    <li>CGP Chemistry: יסודות + קשרים</li>
+                    <li>נובמבר: הגשה ל-Debrecen (ינואר)</li>
+                    <li>נובמבר: פתיחת הגשה ל-Charles University (צ'כיה)</li>
+                </ul>
+                <p><strong>&#128218; 4 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#128995; דצמבר 2026 — ינואר 2027</h4>
+                <ul>
+                    <li>סיום ביולוגיה + התחלת כימיה אורגנית</li>
+                    <li>Thinking Skills (Dawes) — התחלת לוגיקה</li>
+                    <li>בחינות סמסטר א' בפתוחה</li>
+                    <li>ינואר: חורף 2027 בגרויות (אם צריך)</li>
+                </ul>
+                <p><strong>&#128218; 4-5 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#128995; פברואר-מרץ 2027</h4>
+                <ul>
+                    <li>כימיה אורגנית (Zumdahl) + פיזיקה (Barron's)</li>
+                    <li>לוגיקה: תרגול יומי</li>
+                    <li>פברואר: הגשה ל-Prague (דדליין!)</li>
+                    <li>מרץ: הגשה ל-Cluj (רומניה)</li>
+                    <li>Past Papers: להתחיל עם 2011-2015</li>
+                </ul>
+                <p><strong>&#128218; 5 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#128992; אפריל-מאי 2027</h4>
+                <ul>
+                    <li>הגשות: Hradec, LSMU, Debrecen (ספט'), Vilnius (דדליין ~14.05)</li>
+                    <li>Past Papers: 2016-2025</li>
+                    <li>General Knowledge אינטנסיבי</li>
+                    <li>בחינות סמסטר ב' בפתוחה</li>
+                </ul>
+                <p><strong>&#128218; 5-6 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#128308; יוני-יולי 2027</h4>
+                <ul>
+                    <li>סימולציות IMAT: 2-3 בשבוע (תנאי מבחן)</li>
+                    <li><strong>יולי: הרשמה ל-IMAT באתר Universitaly!</strong></li>
+                    <li>בחירת עד 4 אוניברסיטאות באיטליה</li>
+                    <li>הכנת מסמכים: בגרות + אפוסטיל + תרגום</li>
+                </ul>
+                <p><strong>&#128218; 5-6 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#128308; אוגוסט 2027 — חזרה אחרונה</h4>
+                <ul>
+                    <li>Past Papers: סימולציה מלאה כל יום שני</li>
+                    <li>חזרה סופית: רשימות סיכום</li>
+                    <li>אסטרטגיה: סדר שאלות, ניהול זמן</li>
+                    <li><strong>לא ללמוד חומר חדש!</strong></li>
+                </ul>
+                <p><strong>&#128218; 4-5 שעות/יום</strong></p>
+            </div>
+
+            <div class="month">
+                <h4>&#127942; ספטמבר 2027 — IMAT!</h4>
+                <ul>
+                    <li><strong>מבחן IMAT — אמצע ספטמבר!</strong></li>
+                    <li>מבחני כניסה באוניברסיטאות גיבוי</li>
+                    <li>יום לפני: לנוח! לישון טוב!</li>
+                </ul>
+            </div>
+
+            <div class="month">
+                <h4>&#127881; אוקטובר 2027 — תחילת לימודים!</h4>
+                <ul>
+                    <li><strong>תחילת לימודי רפואה!</strong></li>
+                    <li>איטליה / או אוניברסיטה חלופית</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 13. WEEKLY ===== -->
+    <section id="weekly">
+        <h2>13. שבוע טיפוסי (מרץ-מאי 2026)</h2>
+
+        <p><strong>כולל:</strong> בגרויות + פסיכולוגיה (2 קורסים) + 2 עבודות סמינריוניות + ספורט + טיפול</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>שעה</th>
+                    <th>ראשון</th>
+                    <th>שני</th>
+                    <th>שלישי</th>
+                    <th>רביעי</th>
+                    <th>חמישי</th>
+                    <th>שישי</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07:30-08:30</td>
+                    <td colspan="6">&#9728;&#65039; קימה + ארוחת בוקר + מוטיבציה</td>
+                </tr>
+                <tr>
+                    <td>08:30-10:30</td>
+                    <td>&#128214; אנגלית</td>
+                    <td>&#128214; אנגלית</td>
+                    <td>&#128214; אנגלית</td>
+                    <td>&#128214; אנגלית</td>
+                    <td>&#128214; אנגלית</td>
+                    <td>&#128214; חזרה קלה</td>
+                </tr>
+                <tr>
+                    <td>10:30-11:00</td>
+                    <td colspan="6">&#9749; הפסקה</td>
+                </tr>
+                <tr>
+                    <td>11:00-13:00</td>
+                    <td>&#128290; מתמטיקה</td>
+                    <td>&#128290; מתמטיקה</td>
+                    <td>&#128290; מתמטיקה</td>
+                    <td>&#129658; טיפול 11:00</td>
+                    <td>&#128290; מתמטיקה</td>
+                    <td>חופשי</td>
+                </tr>
+                <tr>
+                    <td>13:00-14:00</td>
+                    <td colspan="6">&#127869;&#65039; צהריים + מנוחה</td>
+                </tr>
+                <tr>
+                    <td>14:00-16:00</td>
+                    <td>&#127891; פסיכולוגיה<br>(קריאת חומר)</td>
+                    <td>&#127891; פסיכולוגיה<br>(קריאת חומר)</td>
+                    <td>&#128221; עבודה סמינריונית #1</td>
+                    <td>&#127891; פסיכולוגיה<br>(קריאת חומר)</td>
+                    <td>&#128221; עבודה סמינריונית #2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>16:30-18:00</td>
+                    <td>&#128170; חדר כושר</td>
+                    <td>—</td>
+                    <td>&#128170; חדר כושר</td>
+                    <td>—</td>
+                    <td>&#128170; חדר כושר</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>19:00-20:00</td>
+                    <td>&#128214; קריאה EN</td>
+                    <td>&#128214; קריאה EN</td>
+                    <td>—</td>
+                    <td>&#128214; קריאה EN</td>
+                    <td>&#128214; קריאה EN</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>20:00</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>12 צעדים</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>NA</td>
+                </tr>
+                <tr>
+                    <td>20:30-21:30</td>
+                    <td colspan="6">&#128694; הליכת ערב — בלי טלפון!</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>&#128202; סיכום שעות שבועיות</h3>
+        <table>
+            <thead><tr><th>נושא</th><th>שעות/שבוע</th></tr></thead>
+            <tbody>
+                <tr><td>&#128214; אנגלית (בגרות)</td><td>~11 שעות</td></tr>
+                <tr><td>&#128290; מתמטיקה (בגרות)</td><td>~8 שעות</td></tr>
+                <tr><td>&#127891; פסיכולוגיה (קריאה + מפגשים)</td><td>~6 שעות</td></tr>
+                <tr><td>&#128221; עבודות סמינריוניות</td><td>~4 שעות</td></tr>
+                <tr><td>&#128214; קריאה באנגלית</td><td>~4 שעות</td></tr>
+                <tr><td>&#128170; ספורט</td><td>~4.5 שעות</td></tr>
+                <tr><td>&#129504; טיפול + קבוצות</td><td>~3 שעות</td></tr>
+                <tr><td><strong>סה"כ</strong></td><td><strong>~40.5 שעות</strong></td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>שבת:</strong> מנוחה! הליכה ארוכה, NA (אם לא ביום שישי), סידור חומרים לשבוע הבא.</p>
+    </section>
+
+    <!-- ===== 14. LIFE PLAN ===== -->
+    <section id="life-plan" class="life-section">
+        <h2>14. תוכנית חיים מלאה — עידו 2026-2033</h2>
+
+        <h3>&#127775; החזון</h3>
+        <p style="font-size: 1.2em; color: #a29bfe;">סטודנט לרפואה באירופה, עם תואר בפסיכולוגיה, בריא בגוף ובנפש, עצמאי כלכלית.</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>&#128218; אקדמי</h3>
+                <table>
+                    <thead><tr><th>תקופה</th><th>יעד</th></tr></thead>
+                    <tbody>
+                        <tr><td>מרץ-יולי 2026</td><td>&#9989; סיום בגרויות + 2 עבודות סמינריוניות</td></tr>
+                        <tr><td>אוג' 2026 - אוג' 2027</td><td>&#9989; הכנה IMAT + קורסי Pre-Med בפתוחה</td></tr>
+                        <tr><td>ספט' 2027</td><td>&#127919; IMAT + מבחני כניסה גיבוי</td></tr>
+                        <tr><td>אוקט' 2027</td><td>&#127891; תחילת לימודי רפואה (6 שנים)</td></tr>
+                        <tr><td>2027-2030</td><td>&#128218; שנים 1-3: מדעי הבסיס (אנטומיה, פיזיולוגיה, פרמקולוגיה)</td></tr>
+                        <tr><td>2030-2033</td><td>&#127973; שנים 4-6: קליניקה + התמחויות</td></tr>
+                        <tr><td>2033</td><td>&#127891; סיום MD + מבחן רישוי בישראל</td></tr>
+                        <tr><td>2033-2034</td><td>&#9877;&#65039; סטאז' בישראל</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>&#128170; בריאות + ספורט</h3>
+                <table>
+                    <thead><tr><th>תקופה</th><th>יעד</th></tr></thead>
+                    <tbody>
+                        <tr><td>2026 Q1-Q2</td><td>חדר כושר 3x/שבוע + הליכת ערב יומית</td></tr>
+                        <tr><td>2026 Q3-Q4</td><td>ירידה ל-74 ק"ג (מ-78) + שגרת אימון יציבה</td></tr>
+                        <tr><td>2027+</td><td>שמירה על שגרת ספורט גם בלימודים</td></tr>
+                        <tr><td>קבוע</td><td>Atacand + Atorvastatin — לקחת כל יום!</td></tr>
+                        <tr><td>קבוע</td><td>בדיקת חלבון/קריאטינין בשתן כל 3 חודשים</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>&#129504; נפשי + התאוששות</h3>
+                <table>
+                    <thead><tr><th>מה</th><th>מתי</th></tr></thead>
+                    <tbody>
+                        <tr><td>טיפול קליני</td><td>רביעי 11:00 (שבועי)</td></tr>
+                        <tr><td>קבוצת 12 צעדים</td><td>שלישי 20:00 (שבועי)</td></tr>
+                        <tr><td>קבוצת NA</td><td>שישי/שבת (שבועי)</td></tr>
+                        <tr><td>הליכת ערב — בלי טלפון</td><td>כל יום 20:30</td></tr>
+                        <tr><td>ויסות חושי</td><td>לנהל מודעות + כלים</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>&#128176; כלכלי</h3>
+                <table>
+                    <thead><tr><th>תקופה</th><th>יעד</th></tr></thead>
+                    <tbody>
+                        <tr><td>2026</td><td>לחסוך לספרים + מסמכים (~2,000&#8362;)</td></tr>
+                        <tr><td>2027</td><td>IMAT הרשמה + דמי טיסה + הכנות (~5,000&#8362;)</td></tr>
+                        <tr><td>2027-2033</td><td>שכ"ל: 0-4,000&#8364;/שנה (איטליה + DSU)</td></tr>
+                        <tr><td>2027-2033</td><td>מחיה: ~800-1,200&#8364;/חודש (איטליה)</td></tr>
+                        <tr><td>אופציה</td><td>מלגת DSU = שכ"ל 0 + מגורים + אוכל + 7,000&#8364;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>&#127760; שפות + מיומנויות</h3>
+                <table>
+                    <thead><tr><th>שפה</th><th>רמה נוכחית</th><th>יעד</th></tr></thead>
+                    <tbody>
+                        <tr><td>אנגלית</td><td>בינוני</td><td>&#127919; שוטפת (עד אוקט' 2027)</td></tr>
+                        <tr><td>איטלקית</td><td>—</td><td>&#127919; בסיסית (A2 עד 2028)</td></tr>
+                        <tr><td>עברית</td><td>שפת אם</td><td>&#9989;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>&#128205; ציר זמן ויזואלי</h3>
+                <div class="timeline">
+                    <div class="timeline-item active">
+                        <h4>&#128308; עכשיו — מרץ 2026</h4>
+                        <p>הרשמה לבגרויות + פסיכולוגיה</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>&#128993; מאי-יולי 2026</h4>
+                        <p>בגרויות + עבודות סמינריוניות</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>&#128995; אוג' 2026 - אוג' 2027</h4>
+                        <p>הכנה IMAT + Pre-Med בפתוחה</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>&#11088; ספטמבר 2027</h4>
+                        <p>IMAT + הגשות</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>&#127881; אוקטובר 2027</h4>
+                        <p>תחילת רפואה!</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>&#127891; 2033</h4>
+                        <p>MD + רישוי בישראל</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 15. HEALTH ===== -->
+    <section id="health">
+        <h2>15. בריאות ורווחה</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>&#129504; טיפול נפשי</h3>
+                <ul>
+                    <li>טיפול קליני: רביעי 11:00</li>
+                    <li>קבוצת 12 צעדים: שלישי 20:00</li>
+                    <li>קבוצת NA: שישי/שבת (1x/שבוע)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>&#128170; ספורט</h3>
+                <ul>
+                    <li>חדר כושר: 3x/שבוע (א'/ג'/ה')</li>
+                    <li>הליכת ערב: כל יום, בלי טלפון</li>
+                    <li>יעד: ירידה ל-74 ק"ג (מ-78)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>&#128138; תרופות</h3>
+                <ul>
+                    <li>Atacand — לחץ דם, חלבון בשתן</li>
+                    <li>Atorvastatin 80mg — כולסטרול</li>
+                    <li>מעקב: חלבון/קריאטינין בשתן</li>
+                    <li>ויסות חושי — לנהל!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 16. SCHOLARSHIPS ===== -->
+    <section id="scholarships">
+        <h2>16. מלגות ומימון</h2>
+
+        <h3>&#127470;&#127481; איטליה — הכי טוב!</h3>
+        <div class="card">
+            <h3>&#127873; מלגת DSU (מבוססת הכנסה)</h3>
+            <ul>
+                <li><strong>מכסה:</strong> שכר לימוד 100% + מגורים + אוכל + מענק עד 7,000&#8364;</li>
+                <li><strong>מי זכאי:</strong> כל סטודנט (EU ולא-EU) עם הכנסה נמוכה</li>
+                <li><strong>דדליין:</strong> בדרך כלל סוף ספטמבר</li>
+                <li><strong>כל אזור באיטליה יש סוכנות משלו:</strong> ER.GO (אמיליה-רומאניה), LAZIODISCO (לאציו/רומא)</li>
+            </ul>
+        </div>
+
+        <h3>&#127477;&#127473; פולין (דרכון פולני)</h3>
         <ul>
-            <li>עם דרכון EU: שכ"ל <strong>מתחת ל-1,000€/שנה</strong></li>
-            <li>מבחן אחד: IMAT (ספטמבר)</li>
-            <li>מוכר בישראל, רשת ישראלים גדולה</li>
-            <li>גיבוי: Vilnius (מקבלים IMAT), Debrecen (כמה מועדים)</li>
+            <li>לימודים <strong>בפולנית — חינם</strong> באוניברסיטאות ציבוריות</li>
+            <li>Erasmus+ — לסמסטרי חילופים</li>
         </ul>
-    </div>
-</section>
 
-<!-- 8. UNIVERSITY ENTRANCE EXAMS -->
-<section id="uni-exams">
-    <h2>8. מבחני כניסה — פירוט לכל אוניברסיטה</h2>
+        <h3>&#127469;&#127482; הונגריה</h3>
+        <ul>
+            <li>Stipendium Hungaricum — מלגת ממשלה (בדוק אם פולין זכאית)</li>
+            <li>Szeged: הנחה של 300&#8364; בקבלה מוקדמת (לפני 30.04)</li>
+        </ul>
 
-    <!-- IMAT already covered above, link to it -->
-    <p><em>IMAT (איטליה) — ראה סעיף 4 למעלה</em></p>
+        <h3>&#128161; סיכום כלכלי — התרחיש הטוב ביותר</h3>
+        <table>
+            <thead><tr><th>פריט</th><th>עלות/שנה</th></tr></thead>
+            <tbody>
+                <tr style="background: rgba(0,200,83,0.08);"><td>שכר לימוד (איטליה + DSU)</td><td><strong>0&#8364;</strong></td></tr>
+                <tr><td>מגורים (מלגת DSU)</td><td><strong>0&#8364;</strong></td></tr>
+                <tr><td>אוכל (מלגת DSU)</td><td><strong>0&#8364;</strong></td></tr>
+                <tr><td>מענק DSU</td><td><strong>+7,000&#8364;</strong></td></tr>
+                <tr style="background: rgba(0,200,83,0.15);"><td><strong>סה"כ: לימודי רפואה באיטליה</strong></td><td><strong>&#128154; חינם + 7,000&#8364; מענק!</strong></td></tr>
+            </tbody>
+        </table>
+        <p><em>* תרחיש אופטימי — תלוי בהכנסה משפחתית ובקבלה למלגה</em></p>
+    </section>
 
-    <details>
-        <summary>🇭🇺 Debrecen — מבחן כניסה &nbsp; <span class="time-badge">⏱️ 3-4 חודשים | 2 שעות/יום</span></summary>
-        <div>
-            <h4>מבנה</h4>
-            <ul>
-                <li>MCQ בביולוגיה, כימיה ופיזיקה</li>
-                <li>כמה מועדי כניסה בשנה (כולל ינואר + ספטמבר)</li>
-                <li>אפשר לנסות כמה פעמים</li>
-            </ul>
-            <div class="resource-box">
-                <h4>📚 חומרים</h4>
+    <!-- ===== 17. LINKS ===== -->
+    <section id="links">
+        <h2>17. קישורים וטלפונים חשובים</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>&#128222; בגרויות</h3>
                 <ul>
-                    <li><a href="https://edu.unideb.hu/page.php?id=180">Sample Tests רשמיים (אתר האוניברסיטה)</a></li>
-                    <li><a href="https://southasia.edu.unideb.hu/sample-paper/">Sample Papers + דוגמאות</a></li>
-                    <li><a href="https://www.medimentor.eu/">Medimentor — קורס הכנה + 2,800 שאלות</a></li>
-                    <li>Pearson Biology + Cambridge IGCSE Chemistry</li>
-                    <li>Schaum's Outline of College Physics</li>
+                    <li><strong>אגף הבחינות:</strong> 03-9010260</li>
+                    <li><a href="https://exams.education.gov.il/">אתר הבחינות</a></li>
+                    <li><a href="https://bagrut.gool.co.il/">מועדי בגרויות</a></li>
                 </ul>
             </div>
-            <p><strong>דדליין הגשה:</strong> ~נובמבר (לינואר) / ~מאי (לספטמבר) — <a href="https://edu.unideb.hu/p/application-and-admission">בדוק באתר</a></p>
-        </div>
-    </details>
-
-    <details>
-        <summary>🇭🇺 Semmelweis — מבחן כניסה &nbsp; <span class="time-badge">⏱️ 4-5 חודשים | 2-3 שעות/יום</span></summary>
-        <div>
-            <h4>מבנה</h4>
-            <ul>
-                <li>מבחן כתוב אונליין (Moodle): ביולוגיה רפואית + כימיה רפואית + אנגלית</li>
-                <li>ראיון (MMI-style)</li>
-                <li>רמה גבוהה יותר מ-Debrecen</li>
-            </ul>
-            <div class="resource-box">
-                <h4>📚 חומרים</h4>
+            <div class="card">
+                <h3>&#128218; חומרי לימוד</h3>
                 <ul>
-                    <li><a href="https://semmelweis.hu/admission/process/entrance-exam-medicine-dentistry-and-pharmaceutical-sciences/">רשימת נושאים רשמית + Sample Test</a></li>
-                    <li><a href="https://www.medimentor.eu/">Medimentor — קורס + שאלות תרגול</a></li>
-                    <li>Pearson Biology + Chemistry (Baccalaureate level)</li>
-                    <li><a href="https://www.docsity.com/en/docs/semmelweis-university-entrance-exam-medicine-biology-2025-or-verified-questions-and-expert/14284766/">שאלות בגרויות ישנות (Docsity)</a></li>
+                    <li><a href="https://www.geva.co.il/bagrut_solution/">Yoel Geva — פתרונות</a></li>
+                    <li><a href="https://www.bennygoren.co.il/">Benny Goren — מתמטיקה</a></li>
+                    <li><a href="https://matic.co.il/">Matic — אנגלית</a></li>
+                    <li><a href="https://www.melumad.co.il/">Melumad — מתמטיקה</a></li>
                 </ul>
             </div>
-        </div>
-    </details>
-
-    <details>
-        <summary>🇨🇿 צ'כיה (Prague, Hradec, Pilsen) &nbsp; <span class="time-badge">⏱️ 4-6 חודשים | 2-3 שעות/יום</span></summary>
-        <div>
-            <h4>מבנה</h4>
-            <ul>
-                <li>MCQ בביולוגיה, כימיה ופיזיקה (כל פקולטה עצמאית)</li>
-                <li>חלק מהפקולטות: MMI (Multiple Mini Interview)</li>
-                <li>Prague 1st Faculty: הכי קשה (דדליין: ~פברואר)</li>
-            </ul>
-            <div class="resource-box">
-                <h4>📚 חומרים</h4>
+            <div class="card">
+                <h3>&#127891; אוניברסיטה פתוחה</h3>
                 <ul>
-                    <li><a href="https://en.lf1.cuni.cz/sample-questions">Prague 1st — שאלות לדוגמה</a></li>
-                    <li><a href="https://en.lf1.cuni.cz/how-to-prepare-for-entrance-exams">Prague 1st — How to Prepare</a></li>
-                    <li><a href="https://czechtestprep.com/">Czech Test Prep — הרצאות + שאלות</a></li>
-                    <li><a href="https://medhead.eu/premedical-courses-for-students-in-the-czech-republic/">Medhead — Premedical Courses</a></li>
-                    <li>Campbell Biology (11th ed) + Advanced Biology for You (Gareth Williams)</li>
-                    <li>Chemistry in Context (Cambridge AS/A Level)</li>
-                    <li>Schaum's Outline of College Physics</li>
+                    <li><strong>טלפון:</strong> *3500</li>
+                    <li><a href="https://academic.openu.ac.il/natural_sciences/life/pages/pre-med.aspx">Pre-Med</a></li>
+                    <li><a href="https://www.openu.ac.il/young/program/pages/bagrut.aspx">המרת בגרויות</a></li>
                 </ul>
             </div>
-        </div>
-    </details>
-
-    <details>
-        <summary>🇱🇹 LSMU Kaunas (ליטא) &nbsp; <span class="time-badge">⏱️ 3 חודשים | 1.5-2 שעות/יום</span></summary>
-        <div>
-            <h4>מבנה</h4>
-            <ul>
-                <li>MCQ אונליין: 30 שאלות ביולוגיה + 30 שאלות כימיה (90 דקות)</li>
-                <li>ראיון</li>
-                <li>נדרש: TOEFL/IELTS או מבחן אנגלית שלהם</li>
-            </ul>
-            <div class="resource-box">
-                <h4>📚 חומרים</h4>
+            <div class="card">
+                <h3>&#127973; IMAT + הרשמה</h3>
                 <ul>
-                    <li><a href="https://lsmu.lt/en/admission/admission-process/">תהליך הקבלה הרשמי</a></li>
-                    <li>Pearson Biology + Cambridge IGCSE Chemistry</li>
-                    <li>חפיפה גדולה עם IMAT — אם מתכוננים ל-IMAT, זה מכסה גם את LSMU</li>
+                    <li><a href="https://www.entermedschool.com/imat">EnterMedSchool</a></li>
+                    <li><a href="https://www.entermedschool.com/imat-papers">Past Papers (חינם)</a></li>
+                    <li><a href="https://www.universitaly.it">Universitaly (הרשמה)</a></li>
+                    <li><a href="https://www.imatbuddy.com/">IMAT Buddy</a></li>
+                    <li><a href="https://medschool.it/blog/imat/imat-the-ultimate-guide">Medschool.it — Ultimate Guide</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>&#127760; אוניברסיטאות — לינקים</h3>
+                <ul>
+                    <li><a href="https://www.gov.il/he/pages/licensing-recognition-medicine">&#127470;&#127473; מוכרות בישראל</a></li>
+                    <li><a href="https://umfcluj.ro/en/">&#127479;&#127476; Cluj-Napoca</a></li>
+                    <li><a href="https://edu.unideb.hu/">&#127469;&#127482; Debrecen</a></li>
+                    <li><a href="https://semmelweis.hu/admission/">&#127469;&#127482; Semmelweis</a></li>
+                    <li><a href="https://en.lf1.cuni.cz/">&#127464;&#127487; Prague 1st</a></li>
+                    <li><a href="https://lsmu.lt/en/admission/">&#127473;&#127481; LSMU Kaunas</a></li>
+                    <li><a href="https://apply.vu.lt/courses/course/8-medicine">&#127473;&#127481; Vilnius</a></li>
+                    <li><a href="https://www.rsu.lv/en/study-here/admissions">&#127473;&#127483; Riga Stradins</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>&#128176; מלגות</h3>
+                <ul>
+                    <li><a href="https://thisislocomotive.com/italy-medical-scholarships/">מלגות איטליה</a></li>
+                    <li><a href="https://stipendiumhungaricum.hu/">Stipendium Hungaricum</a></li>
                 </ul>
             </div>
         </div>
-    </details>
 
-    <details>
-        <summary>🇱🇹 Vilnius &nbsp; <span class="time-badge">⏱️ תלוי — IMAT או MCAT</span></summary>
-        <div>
-            <h4>מבנה</h4>
-            <ul>
-                <li>מקבלים ציון IMAT (!) — אם עידו ניגש ל-IMAT, אפשר להגיש גם לוילנה</li>
-                <li>או MCAT (מבחן אמריקאי — מורכב יותר)</li>
-                <li>דדליין: ~מאי 2027 (בדוק ב-<a href="https://apply.vu.lt/courses/course/8-medicine">אתר</a>)</li>
-            </ul>
-        </div>
-    </details>
+        <hr>
+        <p style="text-align: center; margin-top: 40px; color: #888;">
+            נוצר על ידי Koren מגרמניה עבור עידו | מרץ 2026<br>
+            מבוסס על שיחה מ-08.03.2026 + מחקר מקיף | עודכן 15.03.2026<br>
+            <br>
+            <strong>&#9888;&#65039; כל התאריכים הם טיוטה — תמיד לבדוק מול <a href="https://exams.education.gov.il/">האתר הרשמי</a></strong><br>
+            <br>
+            <strong style="color: #a29bfe;">&#128170; עם הדרכון הפולני שלך, איטליה זה ריאלי. צעד אחר צעד!</strong>
+        </p>
+    </section>
 
-    <!-- Time summary -->
-    <h3 style="margin-top:25px">⏱️ סיכום זמני הכנה</h3>
-    <table>
-        <tr><th>מבחן</th><th>זמן הכנה</th><th>שעות/יום</th><th>ספרי ליבה</th></tr>
-        <tr><td>בגרות אנגלית</td><td>3-4 חודשים</td><td>1.5-2</td><td>מיקוד + בגרויות ישנות</td></tr>
-        <tr><td>בגרות מתמטיקה</td><td>4-5 חודשים</td><td>2</td><td>Benny Goren + מיקוד</td></tr>
-        <tr><td>IMAT</td><td>6-9 חודשים</td><td>2-4</td><td>Pearson Bio + Cambridge Chem + Dawes Logic</td></tr>
-        <tr><td>Debrecen</td><td>3-4 חודשים</td><td>2</td><td>Pearson Bio + Cambridge Chem + Schaum's Phys</td></tr>
-        <tr><td>Semmelweis</td><td>4-5 חודשים</td><td>2-3</td><td>Pearson Bio + Chem (Baccalaureate)</td></tr>
-        <tr><td>צ'כיה</td><td>4-6 חודשים</td><td>2-3</td><td>Campbell Bio + Cambridge Chem + Schaum's</td></tr>
-        <tr><td>LSMU</td><td>3 חודשים</td><td>1.5-2</td><td>כמו IMAT (Bio + Chem)</td></tr>
-    </table>
-
-    <div class="card" style="border-color:rgba(0,206,209,0.4); margin-top:15px">
-        <h3 style="color:#00ced1">💡 טיפ חשוב</h3>
-        <p>הספרים חופפים! אם עידו מתכונן ל-IMAT, הוא <strong>מכוסה ב-80%+</strong> גם ל-Debrecen, LSMU ו-Vilnius. הכנה ל-IMAT = הכנה לגיבויים.</p>
-    </div>
-</section>
-
-<!-- 9. YEARLY PLAN -->
-<section id="yearly-plan">
-    <h2>9. תוכנית שנתית מלאה — מרץ 2026 עד אוקטובר 2027</h2>
-
-    <div class="yearly-plan">
-        <!-- March 2026 -->
-        <div class="month" style="border-color:#e74c3c">
-            <h4>🔴 מרץ 2026 — דחוף!</h4>
-            <ul>
-                <li><strong>עד 20.03:</strong> הרשמה לבגרויות קיץ!</li>
-                <li>פתיחת תיק נבחן חיצוני</li>
-                <li>לקנות: ספר מיקוד אנגלית + Benny Goren מתמטיקה</li>
-                <li>להתקשר *3500 — בירור המרת מתמטיקה</li>
-            </ul>
-            <p class="hours">📚 3-4 שעות/יום | אנגלית 2 + מתמטיקה 1-2</p>
-        </div>
-
-        <!-- April 2026 -->
-        <div class="month">
-            <h4>🟡 אפריל 2026</h4>
-            <ul>
-                <li>אנגלית: מודול C (הבנת הנקרא + כתיבה)</li>
-                <li>מתמטיקה: אלגברה + גיאומטריה</li>
-                <li>פסיכולוגיה: המשך 2 קורסים</li>
-                <li>27.04: בגרות ספרות (כבר רשום)</li>
-            </ul>
-            <p class="hours">📚 5-6 שעות/יום | אנגלית 2 + מתמטיקה 2 + פסיכולוגיה 1.5</p>
-        </div>
-
-        <!-- May 2026 -->
-        <div class="month" style="border-color:#e74c3c">
-            <h4>🔴 מאי 2026 — בגרויות!</h4>
-            <ul>
-                <li><strong>12.05:</strong> בגרות מתמטיקה חלק 1</li>
-                <li><strong>13.05:</strong> בגרות מתמטיקה חלק 2</li>
-                <li><strong>18-19.05:</strong> בגרות אנגלית (3 מודולים)</li>
-                <li>28.05: בגרות תנ"ך</li>
-                <li>שבוע לפני כל מבחן: תרגול אינטנסיבי</li>
-            </ul>
-            <p class="hours">📚 5-6 שעות/יום | חזרה אינטנסיבית + סימולציות</p>
-        </div>
-
-        <!-- June 2026 -->
-        <div class="month">
-            <h4>🟡 יוני 2026</h4>
-            <ul>
-                <li>01.06: בגרות היסטוריה</li>
-                <li>08.06: בגרות ביולוגיה</li>
-                <li>10-11.06: בגרות אזרחות</li>
-                <li>21-22.06: בגרות כימיה</li>
-                <li><strong>30.06: מועד ב' אנגלית</strong> (אם לא עבר)</li>
-                <li>לסיים בחינות פסיכולוגיה</li>
-            </ul>
-            <p class="hours">📚 3-4 שעות/יום | בגרויות + פסיכולוגיה</p>
-        </div>
-
-        <!-- July 2026 -->
-        <div class="month">
-            <h4>🟢 יולי 2026</h4>
-            <ul>
-                <li><strong>06-09.07: מועד ב' מתמטיקה</strong> (אם לא עבר)</li>
-                <li>רישום לקורסי Pre-Med בפתוחה (סמסטר א' תשפ"ז)</li>
-                <li>לקנות: Pearson Biology + Cambridge IGCSE Chemistry</li>
-                <li>התחלת קריאה חופשית באנגלית (ספרים, פודקאסטים)</li>
-            </ul>
-            <p class="hours">📚 2-3 שעות/יום | מתמטיקה (מועד ב') / קריאה חופשית</p>
-        </div>
-
-        <!-- August 2026 -->
-        <div class="month">
-            <h4>🟢 אוגוסט 2026 — חופשה + מעבר</h4>
-            <ul>
-                <li>חופשה קצרה (מגיע!)</li>
-                <li>התחלת Pearson Biology — פרקים ראשונים</li>
-                <li>אנגלית: סדרות באנגלית, פודקאסטים</li>
-                <li>ספורט: חזרה לשגרת 3x/שבוע</li>
-            </ul>
-            <p class="hours">📚 1-2 שעות/יום | קריאה + ביולוגיה קלה</p>
-        </div>
-
-        <!-- September 2026 -->
-        <div class="month" style="border-color:#6c5ce7">
-            <h4>🟣 ספטמבר 2026 — התחלת הכנה IMAT</h4>
-            <ul>
-                <li>Pearson Biology: פרקים 1-8 (תא, DNA, גנטיקה)</li>
-                <li>סמסטר א' בפתוחה: ביולוגיה כללית + כימיה כללית</li>
-                <li>חורף 2027 פורסם — לבדוק תאריכי בגרויות!</li>
-            </ul>
-            <p class="hours">📚 3-4 שעות/יום | IMAT 2 + פתוחה 2</p>
-        </div>
-
-        <!-- October 2026 -->
-        <div class="month">
-            <h4>🟣 אוקטובר 2026</h4>
-            <ul>
-                <li>Pearson Biology: פרקים 9-15 (מטבוליזם, רבייה)</li>
-                <li>Cambridge IGCSE Chemistry: יסודות</li>
-                <li>אוניברסיטה פתוחה: המשך קורסים</li>
-            </ul>
-            <p class="hours">📚 4 שעות/יום | Bio 2 + Chem 1 + פתוחה 1</p>
-        </div>
-
-        <!-- November 2026 -->
-        <div class="month">
-            <h4>🟣 נובמבר 2026</h4>
-            <ul>
-                <li>Biology: פרקים 16-22 (פיזיולוגיה, אנטומיה)</li>
-                <li>Chemistry: אטומים, קשרים, תגובות</li>
-                <li>הגשת מועמדות ל-Debrecen (ינואר intake)</li>
-            </ul>
-            <p class="hours">📚 4 שעות/יום | Bio 2 + Chem 1.5 + פתוחה 0.5</p>
-        </div>
-
-        <!-- December 2026 -->
-        <div class="month">
-            <h4>🟣 דצמבר 2026</h4>
-            <ul>
-                <li>Biology: פרקים 23-30 (אקולוגיה, אבולוציה)</li>
-                <li>Chemistry: המשך + כימיה אורגנית (התחלה)</li>
-                <li>הכנה לחורף 2027 בגרויות (אם צריך)</li>
-                <li>בחינות סמסטר א' בפתוחה</li>
-            </ul>
-            <p class="hours">📚 4-5 שעות/יום | IMAT 3 + פתוחה 1-2</p>
-        </div>
-
-        <!-- January 2027 -->
-        <div class="month" style="border-color:#ffc107">
-            <h4>🟡 ינואר 2027</h4>
-            <ul>
-                <li><strong>חורף 2027: בגרות מתמטיקה/אנגלית</strong> (אם לא עבר)</li>
-                <li>IMAT: סיום ביולוגיה, התחלת כימיה אורגנית</li>
-                <li>Thinking Skills (Dawes) — התחלת לוגיקה</li>
-                <li>סמסטר ב' בפתוחה: ביוכימיה / גנטיקה</li>
-            </ul>
-            <p class="hours">📚 4-5 שעות/יום | IMAT 3 + בגרויות (אם צריך)</p>
-        </div>
-
-        <!-- February 2027 -->
-        <div class="month">
-            <h4>🟣 פברואר 2027</h4>
-            <ul>
-                <li>כימיה אורגנית: Zumdahl</li>
-                <li>פיזיקה: Schaum's — מכניקה + חשמל</li>
-                <li>לוגיקה: תרגול יומי (30 דק')</li>
-                <li>הגשת מועמדות: צ'כיה (Prague — דדליין פברואר!)</li>
-            </ul>
-            <p class="hours">📚 4-5 שעות/יום | Chem 2 + Phys 1 + Logic 0.5 + פתוחה 1</p>
-        </div>
-
-        <!-- March 2027 -->
-        <div class="month">
-            <h4>🟣 מרץ 2027</h4>
-            <ul>
-                <li>כימיה + פיזיקה + מתמטיקה IMAT</li>
-                <li>SAT Maths for Dummies</li>
-                <li>לוגיקה: Thinking Skills — אמצע הספר</li>
-                <li>Past Papers: להתחיל עם 2011-2015 (קלות יותר)</li>
-            </ul>
-            <p class="hours">📚 5 שעות/יום | מגביר קצב</p>
-        </div>
-
-        <!-- April 2027 -->
-        <div class="month">
-            <h4>🟣 אפריל 2027</h4>
-            <ul>
-                <li>הגשת מועמדויות: Hradec, LSMU, Debrecen (ספט')</li>
-                <li>Past Papers: 2016-2020</li>
-                <li>חזרה על ביולוגיה (חלשים)</li>
-                <li>General Knowledge: אקטואליה + תרבות כללית</li>
-            </ul>
-            <p class="hours">📚 5 שעות/יום | Past Papers + חזרה</p>
-        </div>
-
-        <!-- May 2027 -->
-        <div class="month">
-            <h4>🟠 מאי 2027</h4>
-            <ul>
-                <li>Past Papers: 2021-2025 (הכי רלוונטי!)</li>
-                <li>סימולציות IMAT: תנאי מבחן (100 דקות)</li>
-                <li>בחינות סמסטר ב' בפתוחה</li>
-                <li>הגשה: Vilnius (דדליין ~14.05)</li>
-            </ul>
-            <p class="hours">📚 5-6 שעות/יום | סימולציות + פתוחה</p>
-        </div>
-
-        <!-- June 2027 -->
-        <div class="month">
-            <h4>🟠 יוני 2027</h4>
-            <ul>
-                <li>סימולציות IMAT: 2-3 בשבוע</li>
-                <li>חזרה על נקודות חולשה</li>
-                <li>General Knowledge אינטנסיבי</li>
-                <li>הגשה: Vilnius (אם דדליין ביוני)</li>
-            </ul>
-            <p class="hours">📚 5-6 שעות/יום | סימולציות + חזרה</p>
-        </div>
-
-        <!-- July 2027 -->
-        <div class="month" style="border-color:#e74c3c">
-            <h4>🔴 יולי 2027 — הרשמה IMAT!</h4>
-            <ul>
-                <li><strong>הרשמה ל-IMAT באתר universitaly.it!</strong></li>
-                <li>בחירת עד 4 אוניברסיטאות באיטליה</li>
-                <li>הכנת מסמכים: בגרות, דרכון, תרגומים</li>
-                <li>סימולציות IMAT מלאות כל יומיים</li>
-            </ul>
-            <p class="hours">📚 5-6 שעות/יום | סימולציות + הגשה</p>
-        </div>
-
-        <!-- August 2027 -->
-        <div class="month" style="border-color:#e74c3c">
-            <h4>🔴 אוגוסט 2027 — חזרה אחרונה</h4>
-            <ul>
-                <li>Past Papers: כל הפייפרים שלא עשה</li>
-                <li>סימולציה מלאה כל יום שני</li>
-                <li>חזרה סופית: רשימות סיכום</li>
-                <li>אסטרטגיה: סדר עדיפויות בשאלות, ניהול זמן</li>
-            </ul>
-            <p class="hours">📚 4-5 שעות/יום | לא ללמוד חומר חדש!</p>
-        </div>
-
-        <!-- September 2027 -->
-        <div class="month" style="border-color:#00c853; background:rgba(0,200,83,0.08)">
-            <h4>🏆 ספטמבר 2027 — IMAT!</h4>
-            <ul>
-                <li><strong>מבחן IMAT!</strong></li>
-                <li>מבחני כניסה באוניברסיטאות גיבוי</li>
-                <li>יום לפני המבחן: לנוח! לישון טוב!</li>
-            </ul>
-            <p class="hours">📚 חזרה קלה בלבד שבוע לפני</p>
-        </div>
-
-        <!-- October 2027 -->
-        <div class="month" style="border-color:#00c853; background:rgba(0,200,83,0.1)">
-            <h4>🎉 אוקטובר 2027 — תחילת לימודים!</h4>
-            <ul>
-                <li><strong>תחילת לימודי רפואה באיטליה!</strong></li>
-                <li>או: אוניברסיטה חלופית (Debrecen/LSMU/צ'כיה)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- 10. WEEKLY SCHEDULE -->
-<section id="weekly">
-    <h2>10. שבוע טיפוסי (מרץ-מאי 2026)</h2>
-
-    <table>
-        <tr><th>שעה</th><th>ראשון</th><th>שני</th><th>שלישי</th><th>רביעי</th><th>חמישי</th><th>שישי</th></tr>
-        <tr><td>07:30-08:30</td><td colspan="6">קימה + ארוחת בוקר</td></tr>
-        <tr><td>08:30-10:30</td><td>📖 אנגלית</td><td>📖 אנגלית</td><td>📖 אנגלית</td><td>📖 אנגלית</td><td>📖 אנגלית</td><td>📖 חזרה קלה</td></tr>
-        <tr><td>10:30-11:00</td><td colspan="6">☕ הפסקה</td></tr>
-        <tr><td>11:00-13:00</td><td>🔢 מתמטיקה</td><td>🔢 מתמטיקה</td><td>🔢 מתמטיקה</td><td>🩺 טיפול 11:00</td><td>🔢 מתמטיקה</td><td>חופשי</td></tr>
-        <tr><td>13:00-14:00</td><td colspan="6">🍽️ צהריים + מנוחה</td></tr>
-        <tr><td>14:00-16:00</td><td>🎓 פסיכולוגיה</td><td>🎓 פסיכולוגיה</td><td>🎓 פסיכולוגיה</td><td>🎓 פסיכולוגיה</td><td>🎓 פסיכולוגיה</td><td>—</td></tr>
-        <tr><td>16:30-18:00</td><td>💪 חדר כושר</td><td>—</td><td>💪 חדר כושר</td><td>—</td><td>💪 חדר כושר</td><td>—</td></tr>
-        <tr><td>19:00-20:00</td><td>📖 קריאה EN</td><td>📖 קריאה EN</td><td>—</td><td>📖 קריאה EN</td><td>📖 קריאה EN</td><td>—</td></tr>
-        <tr><td>20:00</td><td>—</td><td>—</td><td>12 צעדים</td><td>—</td><td>—</td><td>NA</td></tr>
-        <tr><td>20:30-21:30</td><td colspan="6">🚶 הליכת ערב — בלי טלפון!</td></tr>
-    </table>
-
-    <p style="margin-top:10px"><strong>שבת:</strong> מנוחה! הליכה ארוכה, NA (אם לא ביום שישי), סידור חומרים לשבוע הבא.</p>
-</section>
-
-<!-- 11. HEALTH -->
-<section id="health">
-    <h2>11. בריאות ורווחה</h2>
-    <div class="card-grid">
-        <div class="card" contenteditable="false">
-            <h3>🧠 טיפול נפשי</h3>
-            <ul>
-                <li>טיפול קליני: רביעי 11:00</li>
-                <li>קבוצת 12 צעדים: שלישי 20:00</li>
-                <li>קבוצת NA: שישי/שבת (1x/שבוע)</li>
-            </ul>
-        </div>
-        <div class="card" contenteditable="false">
-            <h3>💪 ספורט</h3>
-            <ul>
-                <li>חדר כושר: 3x/שבוע (א'/ג'/ה')</li>
-                <li>הליכת ערב: כל יום, בלי טלפון</li>
-                <li>יעד: ירידה קלה מ-78 ק"ג</li>
-            </ul>
-        </div>
-        <div class="card" contenteditable="false">
-            <h3>💊 תרופות</h3>
-            <ul>
-                <li>Atacand — לחץ דם, חלבון בשתן</li>
-                <li>Atorvastatin 80mg — כולסטרול/קריאטינין</li>
-                <li>מעקב: חלבון/קריאטינין בשתן</li>
-                <li>ויסות חושי — לנהל!</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- 12. LINKS -->
-<section id="links">
-    <h2>12. קישורים וטלפונים חשובים</h2>
-    <div class="card-grid">
-        <div class="card">
-            <h3>📞 בגרויות</h3>
-            <ul>
-                <li><strong>אגף הבחינות:</strong> 03-9010260</li>
-                <li><a href="https://exams.education.gov.il/">אתר הבחינות</a></li>
-                <li><a href="https://bagrut.gool.co.il/">מועדי בגרויות</a></li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>📚 חומרי לימוד</h3>
-            <ul>
-                <li><a href="https://www.geva.co.il/bagrut_solution/">Yoel Geva — פתרונות</a></li>
-                <li><a href="https://www.bennygoren.co.il/">Benny Goren — מתמטיקה (חינם)</a></li>
-                <li><a href="https://matic.co.il/">Matic — אנגלית</a></li>
-                <li><a href="https://www.melumad.co.il/">Melumad — מתמטיקה</a></li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>🎓 אוניברסיטה פתוחה</h3>
-            <ul>
-                <li><strong>טלפון:</strong> *3500</li>
-                <li><a href="https://academic.openu.ac.il/natural_sciences/life/pages/pre-med.aspx">Pre-Med</a></li>
-                <li><a href="https://www.openu.ac.il/young/program/pages/bagrut.aspx">המרת בגרויות</a></li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>🏥 IMAT + אוניברסיטאות</h3>
-            <ul>
-                <li><a href="https://www.entermedschool.com/imat">EnterMedSchool</a></li>
-                <li><a href="https://www.entermedschool.com/imat-papers">Past Papers (חינם)</a></li>
-                <li><a href="https://www.universitaly.it">Universitaly (הרשמה)</a></li>
-                <li><a href="https://www.gov.il/he/pages/licensing-recognition-medicine">אוניברסיטאות מוכרות בישראל</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<div style="text-align:center; padding:40px; color:#606080; font-size:0.85em">
-    <p>נוצר על ידי Koren מגרמניה עבור עידו | מרץ 2026</p>
-    <p>מבוסס על שיחה מ-08.03.2026 + מחקר מקיף</p>
-    <p>⚠️ כל התאריכים הם טיוטה — תמיד לבדוק מול <a href="https://exams.education.gov.il/">האתר הרשמי</a></p>
-    <p style="margin-top:10px">💪 עם הדרכון הפולני שלך, איטליה זה ריאלי. צעד אחר צעד!</p>
-</div>
-
+    <script>
+        document.querySelectorAll('.nav-toc a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('toc').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
